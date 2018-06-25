@@ -1,11 +1,12 @@
 #ifndef SINGLETON_HPP
 #define SINGLETON_HPP
 
-/*
-	Template Singleton thread-safe based on this tutorial : https://come-david.developpez.com/tutoriels/dps/?page=Singleton
-
-	Author : Etienne Andrieu
-*/
+/*!
+    \file singleton.hpp
+    \brief Template for a Singleton, based on this tutorial : https://come-david.developpez.com/tutoriels/dps/?page=Singleton.
+    \author Etienne Andrieu
+    \version 1.0
+ */
 
 #include <SFML/System.hpp>
 

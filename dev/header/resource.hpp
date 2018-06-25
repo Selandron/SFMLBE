@@ -1,23 +1,18 @@
 #ifndef RESOURCE_HPP
 #define RESOURCE_HPP
 
+/*!
+    \file resource.hpp
+    \brief Represent a resource.
+    \author Etienne Andrieu
+    \version 1.0
+ */
+
 #include <string>
+#include "common.hpp"
 
 namespace sfmlbe
 {
-
-/*!
-    Enum defining every type of resource possible.
-*/
-typedef enum
-{
-    RESOURCE_NULL = 0, /*!< Represent a not valid resource. */
-    RESOURCE_GRAPHIC = 1, /*!< Represent a texture resource. */
-    RESOURCE_SOUNDBUFFER = 2, /*!< Represent a soundbuffer resource. */
-    RESOURCE_MUSIC = 3, /*!< Represent a music resource. */
-    RESOURCE_TEXT = 4, /*!< Represent a string resource. */
-    RESOURCE_FONT = 5, /*!< Represent a font resource. */
-}RESOURCE_TYPE;
 
 /*!
     Virtual class representing a Resource. Can be any type of resource listed in RESOURCE_TYPE,
@@ -110,6 +105,7 @@ class Resource
         std::string m_filename;
         RESOURCE_TYPE m_type;
         bool m_loaded;
+        
     private:
 };
 
