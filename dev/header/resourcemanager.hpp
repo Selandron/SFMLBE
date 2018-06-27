@@ -1,12 +1,12 @@
 #ifndef RESOURCEMANAGER_HPP
 #define RESOURCEMANAGER_HPP
 
-/*
-    Resource Manager. Handle every resource loaded.
-    You have to passe by a (or more) xml file that indexes every resource.
-
-    Author : Etienne Andrieu
-*/
+/*!
+    \file resourcemanager.hpp
+    \brief Handle every resources loaded, accessible anywhere in the prgramme using Singleton pattern.
+    \author Etienne Andrieu
+    \version 1.0
+ */
 
 #include "resource.hpp"
 #include "resourcetexture.hpp"
@@ -27,32 +27,122 @@
 namespace sfmlbe
 {
 
+/*!
+	Class representing a Manager for all the resources.
+	Provide an interface to load and unload resources easily, and to retreive them from anywhere.
+	Use a scope system to provide multiple occurences of a resource and manage multiple contexts easier.
+ */
 class ResourceManager : public sfmlbe::Singleton<ResourceManager>
 {
-	friend class Singleton<ResourceManager>;	//Set Singleton system
+	friend class Singleton<ResourceManager>;
 
 	public:
-		Resource * FindResourceByID(const std::string & ID);								//Get the resource wanted
-		Resource * FindResourceByID(const std::string & ID, const std::string & scope);		//Get the resource wanted in the scope targeted
-		void ClearScope(const std::string & scopename);										//Empty the resources for a define scope
-		void Clear();																		//Empty ALL the resources (careful with the use)
-		void LoadFromFileXML(const std::string & filename);									//Load an XML file (in data folder) to parse resources (first scope)
-		void LoadFromFileXML(const std::string & filename, const std::string & scopename);	//Load an XML file (in data folder) with a scope wanted to parse resources
-		void PrintManager();																//Print all content from the manager
-		UINT GetResourceCount() const { return m_resourceCount; }							//Get the number of resources stored
-	protected:
-	    UINT m_resourceCount; 																//Total number of resources loaded
-	    std::map<std::string, std::map<std::string, Resource *> * > m_resources; 			//Map of form <scope ID, Resource map>
+		//! Get a reference on the Resource requested.
+        /*!
+        	Return the first occurrence of the Resource requested in all scopes loaded. Resource could be any type listed in RESOURCE_TYPE.
+        	\throw sfmlbe::ResourceNotFoundException if the resource is not found in any scope.
+        	\param ID ID of the resource .
+        	\return Reference on the sfmlbe::Resource or throws exception.
+            \sa FindResourceByID(const std::string & ID, const std::string & scope)
+        */
+		Resource * FindResourceByID(const std::string & ID);
+
+		//! Get a reference on the Resource requested.
+        /*!
+        	Return the occurence of the Resource requested in the scope targeted. Resource could be any type listed in RESOURCE_TYPE.
+        	\throw sfmlbe::ResourceNotFoundException if the resource is not found in the scope.
+        	\throw sfmlbe::ScopeNotFoundException if the scope is not found.
+        	\param ID ID of the resource.
+        	\param scope Name of the scope where to search the resource.
+        	\return Reference on the sfmlbe::Resource or throws exception.
+            \sa FindResourceByID(const std::string & ID)
+        */
+		Resource * FindResourceByID(const std::string & ID, const std::string & scope);
+
+		//! Clear the scope targeted.
+        /*!
+        	Free memory for all the resources in the scope, and delete it.
+        	If he does not exist, do nothing. 
+        	\param scopename Name of the scope to clear.
+            \sa Clear()
+        */
+		void ClearScope(const std::string & scopename);
+
+		//! Clear all the scopes.
+        /*!
+        	Free memory for all the resources in all scopes, and delete everthing.
+        	Reset the ResourceManager. 
+            \sa Clear(const std::string & scopename)
+        */
+		void Clear();
+
+		//! Load Resource indexed in the XML file targeted.
+        /*!
+        	Try to load every resource indexed in the filename in the first valid scope.
+        	Creates the scope or appends the resources if the scope already exists. If some identical keys are already in it, they will be replaced !
+        	Filename and resources need to be in the data folder (see examples).
+        	\param filename Name of the indexer where all the resources are listes.
+            \sa LoadFromFileXML(const std::string & filename, const std::string & scopename) and LoadFromFileXML(const std::string & filename, const std::string & scopename, const std::string & scope_target)
+        */
+		void LoadFromFileXML(const std::string & filename);
+
+		//! Load Resource indexed in the XML file targeted with a targeted scope.
+        /*!
+        	Try to load every resource indexed in the filename in the targeted scope.
+        	Creates the scope or appends the resources if the scope already exists. If some identical keys are already in it, they will be replaced !
+        	Filename and resources need to be in the data folder (see examples).
+        	\param filename Name of the indexer where all the resources are listes.
+        	\param scopename Name of the scope wanted in filename.
+            \sa LoadFromFileXML() and LoadFromFileXML(const std::string & filename, const std::string & scopename, const std::string & scope_target)
+        */
+		void LoadFromFileXML(const std::string & filename, const std::string & scopename);
+
+		//! Load Resource indexed in the XML file targeted with a targeted scope and add them to another scope.
+        /*!
+        	Try to load every resource indexed in the filename in the targeted scope and append them to anoter scope.
+        	Creates the scope targeted or appends the resources if the scope already exists. If some identical keys are already in it, they will be replaced !
+        	Filename and resources need to be in the data folder (see examples).
+        	\param filename Name of the indexer where all the resources are listes.
+        	\param scopename Name of the scope wanted in filename.
+        	\param scope_target Name of the scope where append resources.
+            \sa LoadFromFileXML() and LoadFromFileXML(const std::string & filename, const std::string & scopename)
+        */
+		void LoadFromFileXML(const std::string & filename, const std::string & scopename, const std::string & scope_target);
+
+		//! Print all the resources in the Resource Manager.
+        /*!
+        	Do what it says.
+        */
+		void PrintManager();
+
+		//! Get the number of resources loaded.
+        /*!
+        	\return Number of resources loaded.
+        */
+		UINT GetResourceCount() const { return m_resourceCount; }
 
 	private:
-		ResourceManager() : m_resourceCount(0) {};																	//Private Constructor (only called once in Singleton)
-		~ResourceManager() {};																						//Private Destructor (only called once)
+		//! Constructor.
+        /*!
+            Construct ResourceManager. Only called once in singleton.
+            \sa ~ResourceManager()
+        */
+		ResourceManager() : m_resourceCount(0) {};
+
+		//! Destructor.
+        /*!
+            Destruct ResourceManager.
+            \sa ResourceManager()
+        */
+		~ResourceManager() {Clear();};
 
 		void ParseXMLTree(tinyxml2::XMLNode * root, std::string path);												//Recursive function to parse XML tree
-		Resource * CreateResource(const tinyxml2::XMLElement * element, const std::string & path); 				//Function to create (but not load) resource
-		void LoadPendingResources(std::string & scope);																//Load the resources not alreadys loaded
+		tr::Resource * CreateResource(const tinyxml2::XMLElement * element, const std::string & path); 				//Function to create (but not load) resource
+		void LoadPendingResources(const std::string & scope_target);																//Load the resources not alreadys loaded
 
 		std::vector<Resource *> m_listOfPendingResources;															//Resources creates but not stored
+		UINT m_resourceCount; 																//Total number of resources loaded
+	    std::map<std::string, std::map<std::string, Resource *> * > m_resources; 			//Map of form <scope ID, Resource map>
 };
 
 }

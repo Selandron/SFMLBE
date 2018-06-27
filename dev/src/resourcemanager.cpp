@@ -14,7 +14,7 @@ sfmlbe::Resource * sfmlbe::ResourceManager::FindResourceByID(const std::string &
 	if (it == this->m_resources.end())
 		throw sfmlbe::ScopeNotFoundException(scope.c_str());
 	std::map<std::string, sfmlbe::Resource *>::iterator sub = it->second->find(ID);
-	return ((sub == it->second->end()) ? NULL : sub->second);
+	return ((sub == it->second->end()) ? throw sfmlbe::ResourceNotFoundException(ID.c_str()) : sub->second);
 }
 
 void sfmlbe::ResourceManager::LoadFromFileXML(const std::string & filename)
@@ -34,7 +34,7 @@ void sfmlbe::ResourceManager::LoadFromFileXML(const std::string & filename)
 	if (scopeEl && scopeEl->Attribute("name") != NULL && !scopeEl->NoChildren())		
 	{
 		std::string scope = scopeEl->Attribute("name");
-		LoadFromFileXML(filename, scope);	//Call for the generic function
+		LoadFromFileXML(filename, scope, scope);	//Call for the generic function
 	}
 	else if (!scopeEl)	//Handles errors
 		std::cerr << "Error : " << filename << " There is no scope in this file." << std::endl;
@@ -77,8 +77,51 @@ void sfmlbe::ResourceManager::LoadFromFileXML(const std::string & filename, cons
 	if (scopeEl && !scopeEl->NoChildren()) //If we have a good scope	
 	{
 		std::string scope = scopeEl->Attribute("name");
+		LoadFromFileXML(filename, scope, scope);	//Call for the generic function
+	}
+	else if (!scopeEl)	//Handle errors
+		std::cerr << "Error : " << filename << " - scope name " << scopename << " don't exist." << std::endl;
+	else if (scopeEl->NoChildren())
+		std::cerr << "Error : In " << filename << " scope " << scopename << " has no resources indexed!" << std::endl;
+	else
+		std::cerr << "Error : " << filename << " - Unknown Error from " << scopename << "." << std::endl;
+}
+
+void sfmlbe::ResourceManager::LoadFromFileXML(const std::string & filename, const std::string & scopename, const std::string & scope_target)
+{
+	//Opening XML document
+	tinyxml2::XMLDocument doc;
+	std::string root = "./data/";
+	root += filename;
+	doc.LoadFile(root.c_str());
+	if (doc.Error()) //Error while pre-parsing document
+	{	
+		std::cerr << doc.ErrorStr() << std::endl;
+		return;
+	}
+
+	//PARSING
+	std::string path = "./data/";	//Root path
+
+	//Search the good scope
+	tinyxml2::XMLNode * scopeSearch = doc.FirstChild()->NextSibling();
+	tinyxml2 ::XMLElement * scopeEl;
+	while (scopeSearch != NULL)
+	{
+		scopeEl = scopeSearch->ToElement();
+		if (scopeEl && strcmp(scopeEl->Value(), "scope") == 0 && strcmp(scopeEl->Attribute("name"), scopename.c_str()) == 0)
+			break;
+		else
+			scopeSearch = scopeEl->NextSibling(); 
+	}
+	if (scopeSearch == NULL)
+		scopeEl = NULL;
+
+	if (scopeEl && !scopeEl->NoChildren()) //If we have a good scope	
+	{
+		std::string scope = scopeEl->Attribute("name");
 		ParseXMLTree(scopeEl, path); //Parse the XML Tree while creating Resources
-		LoadPendingResources(scope);  //Load the pending Resources stored
+		LoadPendingResources(scope_target);  //Load the pending Resources stored
 	}
 	else if (!scopeEl)	//Handle errors
 		std::cerr << "Error : " << filename << " - scope name " << scopename << " don't exist." << std::endl;
@@ -158,7 +201,7 @@ sfmlbe::Resource * sfmlbe::ResourceManager::CreateResource(const tinyxml2::XMLEl
 
 bool sortByType(sfmlbe::Resource *& r1, sfmlbe::Resource *& r2) { return ((int)r1->GetResourceType() < (int)r2->GetResourceType()); } //Function used to sorts Resources by their types
 
-void sfmlbe::ResourceManager::LoadPendingResources(std::string & scope)
+void sfmlbe::ResourceManager::LoadPendingResources(const std::string & scope_target)
 { 
 	std::sort(m_listOfPendingResources.begin(), m_listOfPendingResources.end(), sortByType); //Sort the resources to load by their types
 	std::map<std::string, Resource *> * dup = new std::map<std::string, Resource *>();
@@ -172,8 +215,8 @@ void sfmlbe::ResourceManager::LoadPendingResources(std::string & scope)
 				r->Load();
 				if (!r->IsLoaded())
 				{
-					throw sfmlbe::ResourceNotLoadException(r->GetFilename().c_str());
 					delete r;
+					throw sfmlbe::ResourceNotLoadException(r->GetFilename().c_str());
 				}
 				dup->insert(std::pair<std::string, sfmlbe::Resource *>(r->GetResourceID(), r)); //Insert the resource
 				this->m_resourceCount++;
@@ -212,7 +255,7 @@ void sfmlbe::ResourceManager::LoadPendingResources(std::string & scope)
 
 	if (dup->size() != 0) // If some resources still have been loaded
 	{
-		std::map<std::string,std::map<std::string, sfmlbe::Resource *> * >::iterator it = this->m_resources.find(scope);
+		std::map<std::string,std::map<std::string, sfmlbe::Resource *> * >::iterator it = this->m_resources.find(scope_target);
 		if (it != this->m_resources.end()) //If a scope with that name already exist append to the scope
 		{
 			for (std::map<std::string, Resource *>::iterator i = dup->begin(); i != dup->end(); ++i)
@@ -223,12 +266,18 @@ void sfmlbe::ResourceManager::LoadPendingResources(std::string & scope)
 					it->second->find(i->first)->second = i->second;
 				}
 				else
+				{
 					it->second->insert(std::pair<std::string, Resource *>(i->first, i->second));
+					this->m_resourceCount++;
+				}
 			}
 			delete dup;
 		}
 		else //If not, insert only
-			this->m_resources.insert(std::pair<std::string, std::map<std::string, Resource *> * >(scope, dup)); //Insert the resource scope
+		{
+			this->m_resources.insert(std::pair<std::string, std::map<std::string, Resource *> * >(scope_target, dup)); //Insert the resource scope
+			this->m_resourceCount += dup->size();
+		}
 	}
 	else
 		delete dup;
