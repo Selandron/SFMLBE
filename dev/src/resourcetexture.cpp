@@ -22,10 +22,7 @@ void sfmlbe::ResourceTexture::Load()
 {
 	m_texture = new sf::Texture();
 	if (!m_texture->loadFromFile(m_filename))
-	{
-		delete m_texture;
 	    m_loaded = false;
-	}
 	else 
 		m_loaded = true;
 }

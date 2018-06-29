@@ -22,10 +22,7 @@ void sfmlbe::ResourceMusic::Load()
 {
 	m_music = new sf::Music();
 	if (!m_music->openFromFile(m_filename))
-	{
-		delete m_music;
 	    m_loaded = false;
-	}
 	else 
 		m_loaded = true;
 }

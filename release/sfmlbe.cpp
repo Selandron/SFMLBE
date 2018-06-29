@@ -1,4 +1,218 @@
-#include "resourcemanager.hpp"
+#include "sfmlbe.hpp"
+
+
+sfmlbe::ResourceFont::ResourceFont()
+: sfmlbe::Resource("null_font", "null_font")
+{
+	m_type = RESOURCE_FONT;
+	m_font = NULL;
+}
+
+sfmlbe::ResourceFont::ResourceFont(std::string id, std::string filename)
+: sfmlbe::Resource(id, filename)
+{	
+	m_type = RESOURCE_FONT;
+}
+
+sfmlbe::ResourceFont::~ResourceFont()
+{
+	Unload();
+}
+
+void sfmlbe::ResourceFont::Load()
+{
+	m_font = new sf::Font();
+	if (!m_font->loadFromFile(m_filename))
+	    m_loaded = false;
+	else 
+		m_loaded = true;
+}
+
+void sfmlbe::ResourceFont::Unload()
+{
+	if (m_font)
+		delete m_font;
+	m_loaded = false;
+}
+
+sfmlbe::ResourceMusic::ResourceMusic()
+: sfmlbe::Resource("null_music", "null_music")
+{
+	m_type = RESOURCE_MUSIC;
+	m_music = NULL;
+}
+
+sfmlbe::ResourceMusic::ResourceMusic(std::string id, std::string filename)
+: sfmlbe::Resource(id, filename)
+{	
+	m_type = RESOURCE_MUSIC;
+}
+
+sfmlbe::ResourceMusic::~ResourceMusic()
+{
+	Unload();
+}
+
+void sfmlbe::ResourceMusic::Load()
+{
+	m_music = new sf::Music();
+	if (!m_music->openFromFile(m_filename))
+	    m_loaded = false;
+	else 
+		m_loaded = true;
+}
+
+void sfmlbe::ResourceMusic::Unload()
+{
+	if (m_music != NULL)
+		delete m_music;
+	m_loaded = false;
+}
+
+sfmlbe::ResourceSoundBuffer::ResourceSoundBuffer()
+: sfmlbe::Resource("null_soundbuffer", "null_soundbuffer")
+{
+	m_type = RESOURCE_SOUNDBUFFER;
+	m_soundBuffer = NULL;
+}
+
+sfmlbe::ResourceSoundBuffer::ResourceSoundBuffer(std::string id, std::string filename)
+: sfmlbe::Resource(id, filename)
+{	
+	m_type = RESOURCE_SOUNDBUFFER;
+}
+
+sfmlbe::ResourceSoundBuffer::~ResourceSoundBuffer()
+{
+	Unload();
+}
+
+void sfmlbe::ResourceSoundBuffer::Load()
+{
+	m_soundBuffer = new sf::SoundBuffer();
+	if (!m_soundBuffer->loadFromFile(m_filename))
+	    m_loaded = false;
+	else 
+		m_loaded = true;
+}
+
+void sfmlbe::ResourceSoundBuffer::Unload()
+{
+	if (m_soundBuffer)
+		delete m_soundBuffer;
+	m_loaded = false;
+}
+
+sfmlbe::ResourceText::ResourceText()
+: sfmlbe::Resource("null_string", "null_string")
+{
+	m_type = RESOURCE_TEXT;
+	m_resources = NULL;
+}
+
+sfmlbe::ResourceText::ResourceText(std::string id, std::string filename)
+: sfmlbe::Resource(id, filename)
+{	
+	m_type = RESOURCE_TEXT;
+}
+
+sfmlbe::ResourceText::~ResourceText()
+{
+	Unload();
+}
+
+void sfmlbe::ResourceText::Load()
+{
+	m_resources = new std::map<std::string, std::string *>();
+
+	tinyxml2::XMLDocument doc;
+	doc.LoadFile(m_filename.c_str());
+	if (doc.Error())
+	{	
+		std::cerr << doc.ErrorStr() << std::endl;
+		delete m_resources;
+		m_loaded = false;
+		return;
+	}
+
+	tinyxml2::XMLElement * root = doc.FirstChildElement();
+
+	if (strcmp(root->Value(), "text") == 0 && root->Attribute("key") != NULL)
+	{
+		std::string * str = new std::string(root->GetText());
+		m_resources->insert(std::pair<std::string, std::string *>(root->Attribute("key"), str));
+	}
+	while(root->NextSiblingElement("text") != NULL)
+	{
+		root = root->NextSiblingElement("text");
+		if (strcmp(root->Value(), "text") == 0 && root->Attribute("key") != NULL)
+		{
+			std::string * str = new std::string(root->GetText());
+			m_resources->insert(std::pair<std::string, std::string *>(root->Attribute("key"), str));
+		}
+	}
+
+	if (!m_resources) 
+	    m_loaded = false;
+	else 
+		m_loaded = true;
+}
+
+void sfmlbe::ResourceText::Unload()
+{
+	if (m_resources)
+	{
+		for(auto& it: *m_resources)
+			delete it.second;
+		m_resources->clear();
+	}
+	delete m_resources;
+	m_loaded = false;
+}
+
+std::string * sfmlbe::ResourceText::GetText(std::string key)
+{
+	if (!m_loaded)
+		return NULL;
+	for (auto& it: *m_resources)
+		if (it.first.compare(key) == 0)
+			return it.second;
+	return NULL;
+}
+
+sfmlbe::ResourceTexture::ResourceTexture()
+: sfmlbe::Resource("null_graphic", "null_graphic")
+{
+	m_type = RESOURCE_GRAPHIC;
+	m_texture = NULL;
+}
+
+sfmlbe::ResourceTexture::ResourceTexture(std::string id, std::string filename)
+: sfmlbe::Resource(id, filename)
+{	
+	m_type = RESOURCE_GRAPHIC;
+}
+
+sfmlbe::ResourceTexture::~ResourceTexture()
+{
+	Unload();
+}
+
+void sfmlbe::ResourceTexture::Load()
+{
+	m_texture = new sf::Texture();
+	if (!m_texture->loadFromFile(m_filename))
+	    m_loaded = false;
+	else 
+		m_loaded = true;
+}
+
+void sfmlbe::ResourceTexture::Unload()
+{
+	if (m_texture != NULL)
+		delete m_texture;
+	m_loaded = false;
+}
 
 sfmlbe::Resource * sfmlbe::ResourceManager::FindResourceByID(const std::string & ID) 
 {

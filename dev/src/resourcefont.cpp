@@ -22,10 +22,7 @@ void sfmlbe::ResourceFont::Load()
 {
 	m_font = new sf::Font();
 	if (!m_font->loadFromFile(m_filename))
-	{
-		delete m_font;
 	    m_loaded = false;
-	}
 	else 
 		m_loaded = true;
 }

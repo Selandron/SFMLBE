@@ -24,6 +24,8 @@
 #include <iomanip>
 #include "tinyxml2.hpp"
 
+#define UINT unsigned int
+
 namespace sfmlbe
 {
 
