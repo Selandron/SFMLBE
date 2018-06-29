@@ -5,6 +5,13 @@
 #include <sstream> 
 #include <exception> 
 
+/*!
+    \file resourceexceptions.hpp
+    \brief All the exceptions used in the Resource system.
+    \author Etienne Andrieu
+    \version 1.0
+ */
+
 namespace sfmlbe
 {
   

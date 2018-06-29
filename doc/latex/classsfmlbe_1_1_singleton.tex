@@ -1,0 +1,50 @@
+\hypertarget{classsfmlbe_1_1_singleton}{}\section{sfmlbe\+:\+:Singleton$<$ T $>$ Class Template Reference}
+\label{classsfmlbe_1_1_singleton}\index{sfmlbe\+::\+Singleton$<$ T $>$@{sfmlbe\+::\+Singleton$<$ T $>$}}
+
+
+{\ttfamily \#include $<$singleton.\+hpp$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static T $\ast$ \mbox{\hyperlink{classsfmlbe_1_1_singleton_a313529b2a097425bf5500df8848ead3e}{Get\+Instance}} ()
+\item 
+static void \mbox{\hyperlink{classsfmlbe_1_1_singleton_a0fa947a0f0940b94f757e49b56f37555}{Kill}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsfmlbe_1_1_singleton_a3f47ec090e5341446601408f9d38b467}\label{classsfmlbe_1_1_singleton_a3f47ec090e5341446601408f9d38b467}} 
+\mbox{\hyperlink{classsfmlbe_1_1_singleton_a3f47ec090e5341446601408f9d38b467}{Singleton}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsfmlbe_1_1_singleton_aa99901d754398a178b10e72fcc582b80}\label{classsfmlbe_1_1_singleton_aa99901d754398a178b10e72fcc582b80}} 
+\mbox{\hyperlink{classsfmlbe_1_1_singleton_aa99901d754398a178b10e72fcc582b80}{$\sim$\+Singleton}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class sfmlbe\+::\+Singleton$<$ T $>$}
+
+Class representing a \mbox{\hyperlink{classsfmlbe_1_1_singleton}{Singleton}} pattern for a typename T. Used in \mbox{\hyperlink{classsfmlbe_1_1_resource_manager}{Resource\+Manager}}. Thread safe. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsfmlbe_1_1_singleton_a313529b2a097425bf5500df8848ead3e}\label{classsfmlbe_1_1_singleton_a313529b2a097425bf5500df8848ead3e}} 
+\index{sfmlbe\+::\+Singleton@{sfmlbe\+::\+Singleton}!Get\+Instance@{Get\+Instance}}
+\index{Get\+Instance@{Get\+Instance}!sfmlbe\+::\+Singleton@{sfmlbe\+::\+Singleton}}
+\subsubsection{\texorpdfstring{Get\+Instance()}{GetInstance()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+static T$\ast$ \mbox{\hyperlink{classsfmlbe_1_1_singleton}{sfmlbe\+::\+Singleton}}$<$ T $>$\+::Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Static function used to get a reference to the instance of the \mbox{\hyperlink{classsfmlbe_1_1_singleton}{Singleton}} templated class (thread safe). \mbox{\Hypertarget{classsfmlbe_1_1_singleton_a0fa947a0f0940b94f757e49b56f37555}\label{classsfmlbe_1_1_singleton_a0fa947a0f0940b94f757e49b56f37555}} 
+\index{sfmlbe\+::\+Singleton@{sfmlbe\+::\+Singleton}!Kill@{Kill}}
+\index{Kill@{Kill}!sfmlbe\+::\+Singleton@{sfmlbe\+::\+Singleton}}
+\subsubsection{\texorpdfstring{Kill()}{Kill()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+static void \mbox{\hyperlink{classsfmlbe_1_1_singleton}{sfmlbe\+::\+Singleton}}$<$ T $>$\+::Kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Static function used to clear the memory and the reference to the instance of the \mbox{\hyperlink{classsfmlbe_1_1_singleton}{Singleton}} templated class. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+dev/header/\mbox{\hyperlink{singleton_8hpp}{singleton.\+hpp}}\end{DoxyCompactItemize}

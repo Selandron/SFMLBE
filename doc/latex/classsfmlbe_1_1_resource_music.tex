@@ -1,0 +1,135 @@
+\hypertarget{classsfmlbe_1_1_resource_music}{}\section{sfmlbe\+:\+:Resource\+Music Class Reference}
+\label{classsfmlbe_1_1_resource_music}\index{sfmlbe\+::\+Resource\+Music@{sfmlbe\+::\+Resource\+Music}}
+
+
+{\ttfamily \#include $<$resourcemusic.\+hpp$>$}
+
+Inheritance diagram for sfmlbe\+:\+:Resource\+Music\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsfmlbe_1_1_resource_music}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsfmlbe_1_1_resource_music_a9a20ebb5669632cbc4d85afb6ecf8848}{Resource\+Music}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsfmlbe_1_1_resource_music_a31e4aa77dd956096604e3b939e3d2075}{Resource\+Music}} (std\+::string ID, std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsfmlbe_1_1_resource_music_a13f5a79c13b15951d855cad9224a1a7b}{$\sim$\+Resource\+Music}} ()
+\begin{DoxyCompactList}\small\item\em Descructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_resource_music_a8d612eff1f1f8847c2b96a616456e558}{Load}} ()
+\begin{DoxyCompactList}\small\item\em Load the sf\+::\+Music targeted by this resource. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_resource_music_a5697430030c12a5850f317147feb059f}{Unload}} ()
+\begin{DoxyCompactList}\small\item\em Unload the sf\+::\+Music targeted by this resource. \end{DoxyCompactList}\item 
+sf\+::\+Music $\ast$ \mbox{\hyperlink{classsfmlbe_1_1_resource_music_a2092277768f71da98fac91d2d37c898c}{Get\+Music}} ()
+\begin{DoxyCompactList}\small\item\em Get the sf\+::\+Music associed to this resource. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class allowing to store a sf\+::\+Music using the S\+F\+M\+L\+BE \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} Manager system. Provide an interface to load and unload music easily. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_music_a9a20ebb5669632cbc4d85afb6ecf8848}\label{classsfmlbe_1_1_resource_music_a9a20ebb5669632cbc4d85afb6ecf8848}} 
+\index{sfmlbe\+::\+Resource\+Music@{sfmlbe\+::\+Resource\+Music}!Resource\+Music@{Resource\+Music}}
+\index{Resource\+Music@{Resource\+Music}!sfmlbe\+::\+Resource\+Music@{sfmlbe\+::\+Resource\+Music}}
+\subsubsection{\texorpdfstring{Resource\+Music()}{ResourceMusic()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sfmlbe\+::\+Resource\+Music\+::\+Resource\+Music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Construct a non loaded music resource. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_music_a31e4aa77dd956096604e3b939e3d2075}{Resource\+Music(std\+::string I\+D, std\+::string filename)}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_music_a13f5a79c13b15951d855cad9224a1a7b}{$\sim$\+Resource\+Music()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_music_a31e4aa77dd956096604e3b939e3d2075}\label{classsfmlbe_1_1_resource_music_a31e4aa77dd956096604e3b939e3d2075}} 
+\index{sfmlbe\+::\+Resource\+Music@{sfmlbe\+::\+Resource\+Music}!Resource\+Music@{Resource\+Music}}
+\index{Resource\+Music@{Resource\+Music}!sfmlbe\+::\+Resource\+Music@{sfmlbe\+::\+Resource\+Music}}
+\subsubsection{\texorpdfstring{Resource\+Music()}{ResourceMusic()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sfmlbe\+::\+Resource\+Music\+::\+Resource\+Music (\begin{DoxyParamCaption}\item[{std\+::string}]{ID,  }\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Construct a non loaded music resource, but with provided parameters. 
+\begin{DoxyParams}{Parameters}
+{\em ID} & ID of the resource in the scope specified. \\
+\hline
+{\em filename} & Relative path of file from where the resource is loaded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_music_a9a20ebb5669632cbc4d85afb6ecf8848}{Resource\+Music()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_music_a13f5a79c13b15951d855cad9224a1a7b}{$\sim$\+Resource\+Music()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_music_a13f5a79c13b15951d855cad9224a1a7b}\label{classsfmlbe_1_1_resource_music_a13f5a79c13b15951d855cad9224a1a7b}} 
+\index{sfmlbe\+::\+Resource\+Music@{sfmlbe\+::\+Resource\+Music}!````~Resource\+Music@{$\sim$\+Resource\+Music}}
+\index{````~Resource\+Music@{$\sim$\+Resource\+Music}!sfmlbe\+::\+Resource\+Music@{sfmlbe\+::\+Resource\+Music}}
+\subsubsection{\texorpdfstring{$\sim$\+Resource\+Music()}{~ResourceMusic()}}
+{\footnotesize\ttfamily sfmlbe\+::\+Resource\+Music\+::$\sim$\+Resource\+Music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Descructor. 
+
+Free memory used by the sf\+::\+Music and this resource. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_music_a9a20ebb5669632cbc4d85afb6ecf8848}{Resource\+Music()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_music_a31e4aa77dd956096604e3b939e3d2075}{Resource\+Music(std\+::string I\+D, std\+::string filename)}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_music_a2092277768f71da98fac91d2d37c898c}\label{classsfmlbe_1_1_resource_music_a2092277768f71da98fac91d2d37c898c}} 
+\index{sfmlbe\+::\+Resource\+Music@{sfmlbe\+::\+Resource\+Music}!Get\+Music@{Get\+Music}}
+\index{Get\+Music@{Get\+Music}!sfmlbe\+::\+Resource\+Music@{sfmlbe\+::\+Resource\+Music}}
+\subsubsection{\texorpdfstring{Get\+Music()}{GetMusic()}}
+{\footnotesize\ttfamily sf\+::\+Music$\ast$ sfmlbe\+::\+Resource\+Music\+::\+Get\+Music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the sf\+::\+Music associed to this resource. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the sf\+::\+Music or N\+U\+LL. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_music_a8d612eff1f1f8847c2b96a616456e558}\label{classsfmlbe_1_1_resource_music_a8d612eff1f1f8847c2b96a616456e558}} 
+\index{sfmlbe\+::\+Resource\+Music@{sfmlbe\+::\+Resource\+Music}!Load@{Load}}
+\index{Load@{Load}!sfmlbe\+::\+Resource\+Music@{sfmlbe\+::\+Resource\+Music}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Resource\+Music\+::\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Load the sf\+::\+Music targeted by this resource. 
+
+If success set this resource as loaded. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_music_a5697430030c12a5850f317147feb059f}{Unload()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_acd0812c81f7d5d851a4671f0cf7bb4f1}{Is\+Loaded()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classsfmlbe_1_1_resource_a35981869a1e90ebbf30258ff7aa1d6d2}{sfmlbe\+::\+Resource}}.
+
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_music_a5697430030c12a5850f317147feb059f}\label{classsfmlbe_1_1_resource_music_a5697430030c12a5850f317147feb059f}} 
+\index{sfmlbe\+::\+Resource\+Music@{sfmlbe\+::\+Resource\+Music}!Unload@{Unload}}
+\index{Unload@{Unload}!sfmlbe\+::\+Resource\+Music@{sfmlbe\+::\+Resource\+Music}}
+\subsubsection{\texorpdfstring{Unload()}{Unload()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Resource\+Music\+::\+Unload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Unload the sf\+::\+Music targeted by this resource. 
+
+If success set this resource as unloaded. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_music_a8d612eff1f1f8847c2b96a616456e558}{Load()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_acd0812c81f7d5d851a4671f0cf7bb4f1}{Is\+Loaded()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classsfmlbe_1_1_resource_a48c75a88679cf457965dd013f47014b9}{sfmlbe\+::\+Resource}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+dev/header/\mbox{\hyperlink{resourcemusic_8hpp}{resourcemusic.\+hpp}}\end{DoxyCompactItemize}

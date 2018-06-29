@@ -1,0 +1,140 @@
+\hypertarget{classsfmlbe_1_1_resource_text}{}\section{sfmlbe\+:\+:Resource\+Text Class Reference}
+\label{classsfmlbe_1_1_resource_text}\index{sfmlbe\+::\+Resource\+Text@{sfmlbe\+::\+Resource\+Text}}
+
+
+{\ttfamily \#include $<$resourcetext.\+hpp$>$}
+
+Inheritance diagram for sfmlbe\+:\+:Resource\+Text\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsfmlbe_1_1_resource_text}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsfmlbe_1_1_resource_text_aaf976bc4d8e514a621239ab3ef61b294}{Resource\+Text}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsfmlbe_1_1_resource_text_a05e07dcbb416cee62e4060627a76c749}{Resource\+Text}} (std\+::string ID, std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsfmlbe_1_1_resource_text_a037b1bd5ac566301358ee5cd75a4cd00}{$\sim$\+Resource\+Text}} ()
+\begin{DoxyCompactList}\small\item\em Descructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_resource_text_a1176965f3e9d26c618688f7899b4b58b}{Load}} ()
+\begin{DoxyCompactList}\small\item\em Load the std\+::map of the std\+::string targeted by this resource. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_resource_text_a7493d044dfcd376b0fd17fd5fbd52ada}{Unload}} ()
+\begin{DoxyCompactList}\small\item\em Unload the std\+::map of the std\+::string targeted by this resource. \end{DoxyCompactList}\item 
+std\+::string $\ast$ \mbox{\hyperlink{classsfmlbe_1_1_resource_text_a36954e8d61e7406f4923fda6acd4e4f3}{Get\+Text}} (std\+::string key)
+\begin{DoxyCompactList}\small\item\em Get the std\+::map of the std\+::string associed to this resource, with a key needed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class allowing to store a std\+::map of std\+::string using the S\+F\+M\+L\+BE \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} Manager system. Provide an interface to load and unload large texts easily. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_text_aaf976bc4d8e514a621239ab3ef61b294}\label{classsfmlbe_1_1_resource_text_aaf976bc4d8e514a621239ab3ef61b294}} 
+\index{sfmlbe\+::\+Resource\+Text@{sfmlbe\+::\+Resource\+Text}!Resource\+Text@{Resource\+Text}}
+\index{Resource\+Text@{Resource\+Text}!sfmlbe\+::\+Resource\+Text@{sfmlbe\+::\+Resource\+Text}}
+\subsubsection{\texorpdfstring{Resource\+Text()}{ResourceText()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sfmlbe\+::\+Resource\+Text\+::\+Resource\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Construct a non loaded text resource. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_text_a05e07dcbb416cee62e4060627a76c749}{Resource\+Text(std\+::string I\+D, std\+::string filename)}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_text_a037b1bd5ac566301358ee5cd75a4cd00}{$\sim$\+Resource\+Text()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_text_a05e07dcbb416cee62e4060627a76c749}\label{classsfmlbe_1_1_resource_text_a05e07dcbb416cee62e4060627a76c749}} 
+\index{sfmlbe\+::\+Resource\+Text@{sfmlbe\+::\+Resource\+Text}!Resource\+Text@{Resource\+Text}}
+\index{Resource\+Text@{Resource\+Text}!sfmlbe\+::\+Resource\+Text@{sfmlbe\+::\+Resource\+Text}}
+\subsubsection{\texorpdfstring{Resource\+Text()}{ResourceText()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sfmlbe\+::\+Resource\+Text\+::\+Resource\+Text (\begin{DoxyParamCaption}\item[{std\+::string}]{ID,  }\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Construct a non loaded text resource, but with provided parameters. 
+\begin{DoxyParams}{Parameters}
+{\em ID} & ID of the resource in the scope specified. \\
+\hline
+{\em filename} & Relative path of file from where the resource is loaded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_text_aaf976bc4d8e514a621239ab3ef61b294}{Resource\+Text()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_text_a037b1bd5ac566301358ee5cd75a4cd00}{$\sim$\+Resource\+Text()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_text_a037b1bd5ac566301358ee5cd75a4cd00}\label{classsfmlbe_1_1_resource_text_a037b1bd5ac566301358ee5cd75a4cd00}} 
+\index{sfmlbe\+::\+Resource\+Text@{sfmlbe\+::\+Resource\+Text}!````~Resource\+Text@{$\sim$\+Resource\+Text}}
+\index{````~Resource\+Text@{$\sim$\+Resource\+Text}!sfmlbe\+::\+Resource\+Text@{sfmlbe\+::\+Resource\+Text}}
+\subsubsection{\texorpdfstring{$\sim$\+Resource\+Text()}{~ResourceText()}}
+{\footnotesize\ttfamily sfmlbe\+::\+Resource\+Text\+::$\sim$\+Resource\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Descructor. 
+
+Free memory used by all the strings and this resource. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_text_aaf976bc4d8e514a621239ab3ef61b294}{Resource\+Text()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_text_a05e07dcbb416cee62e4060627a76c749}{Resource\+Text(std\+::string I\+D, std\+::string filename)}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_text_a36954e8d61e7406f4923fda6acd4e4f3}\label{classsfmlbe_1_1_resource_text_a36954e8d61e7406f4923fda6acd4e4f3}} 
+\index{sfmlbe\+::\+Resource\+Text@{sfmlbe\+::\+Resource\+Text}!Get\+Text@{Get\+Text}}
+\index{Get\+Text@{Get\+Text}!sfmlbe\+::\+Resource\+Text@{sfmlbe\+::\+Resource\+Text}}
+\subsubsection{\texorpdfstring{Get\+Text()}{GetText()}}
+{\footnotesize\ttfamily std\+::string$\ast$ sfmlbe\+::\+Resource\+Text\+::\+Get\+Text (\begin{DoxyParamCaption}\item[{std\+::string}]{key }\end{DoxyParamCaption})}
+
+
+
+Get the std\+::map of the std\+::string associed to this resource, with a key needed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Key of the std\+::string wanted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the sf\+::map or N\+U\+LL. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_text_a1176965f3e9d26c618688f7899b4b58b}\label{classsfmlbe_1_1_resource_text_a1176965f3e9d26c618688f7899b4b58b}} 
+\index{sfmlbe\+::\+Resource\+Text@{sfmlbe\+::\+Resource\+Text}!Load@{Load}}
+\index{Load@{Load}!sfmlbe\+::\+Resource\+Text@{sfmlbe\+::\+Resource\+Text}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Resource\+Text\+::\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Load the std\+::map of the std\+::string targeted by this resource. 
+
+If success set this resource as loaded. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_text_a7493d044dfcd376b0fd17fd5fbd52ada}{Unload()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_acd0812c81f7d5d851a4671f0cf7bb4f1}{Is\+Loaded()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classsfmlbe_1_1_resource_a35981869a1e90ebbf30258ff7aa1d6d2}{sfmlbe\+::\+Resource}}.
+
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_text_a7493d044dfcd376b0fd17fd5fbd52ada}\label{classsfmlbe_1_1_resource_text_a7493d044dfcd376b0fd17fd5fbd52ada}} 
+\index{sfmlbe\+::\+Resource\+Text@{sfmlbe\+::\+Resource\+Text}!Unload@{Unload}}
+\index{Unload@{Unload}!sfmlbe\+::\+Resource\+Text@{sfmlbe\+::\+Resource\+Text}}
+\subsubsection{\texorpdfstring{Unload()}{Unload()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Resource\+Text\+::\+Unload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Unload the std\+::map of the std\+::string targeted by this resource. 
+
+If success set this resource as unloaded. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_text_a1176965f3e9d26c618688f7899b4b58b}{Load()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_acd0812c81f7d5d851a4671f0cf7bb4f1}{Is\+Loaded()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classsfmlbe_1_1_resource_a48c75a88679cf457965dd013f47014b9}{sfmlbe\+::\+Resource}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+dev/header/\mbox{\hyperlink{resourcetext_8hpp}{resourcetext.\+hpp}}\end{DoxyCompactItemize}

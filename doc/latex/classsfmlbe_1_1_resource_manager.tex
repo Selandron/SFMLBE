@@ -1,0 +1,221 @@
+\hypertarget{classsfmlbe_1_1_resource_manager}{}\section{sfmlbe\+:\+:Resource\+Manager Class Reference}
+\label{classsfmlbe_1_1_resource_manager}\index{sfmlbe\+::\+Resource\+Manager@{sfmlbe\+::\+Resource\+Manager}}
+
+
+{\ttfamily \#include $<$resourcemanager.\+hpp$>$}
+
+Inheritance diagram for sfmlbe\+:\+:Resource\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsfmlbe_1_1_resource_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} $\ast$ \mbox{\hyperlink{classsfmlbe_1_1_resource_manager_aea559b11d248db65d6bff0caf902098a}{Find\+Resource\+By\+ID}} (const std\+::string \&ID)
+\begin{DoxyCompactList}\small\item\em Get a reference on the \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} requested. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} $\ast$ \mbox{\hyperlink{classsfmlbe_1_1_resource_manager_a7aa9e19b0a5d525a92ac698ad6497487}{Find\+Resource\+By\+ID}} (const std\+::string \&ID, const std\+::string \&scope)
+\begin{DoxyCompactList}\small\item\em Get a reference on the \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} requested. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_resource_manager_a2d25aeeab0779847e3c010ab89c50d0f}{Clear\+Scope}} (const std\+::string \&scopename)
+\begin{DoxyCompactList}\small\item\em Clear the scope targeted. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_resource_manager_ae7496b805297eef8c8315ab2437c008c}{Clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear all the scopes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_resource_manager_a8f99da24868d355227f641dc50db2bd2}{Load\+From\+File\+X\+ML}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Load \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} indexed in the X\+ML file targeted. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_resource_manager_a2da403b4057837350f5e09f0a33b80dd}{Load\+From\+File\+X\+ML}} (const std\+::string \&filename, const std\+::string \&scopename)
+\begin{DoxyCompactList}\small\item\em Load \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} indexed in the X\+ML file targeted with a targeted scope. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_resource_manager_a99707b50bdf61ac1daadd65027a1ae2b}{Load\+From\+File\+X\+ML}} (const std\+::string \&filename, const std\+::string \&scopename, const std\+::string \&scope\+\_\+target)
+\begin{DoxyCompactList}\small\item\em Load \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} indexed in the X\+ML file targeted with a targeted scope and add them to another scope. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_resource_manager_a74e64d1b098dcdbc0ee4fd8925303523}{Print\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Print all the resources in the \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} Manager. \end{DoxyCompactList}\item 
+U\+I\+NT \mbox{\hyperlink{classsfmlbe_1_1_resource_manager_a99c69873bb1084afe35a97986c657ee9}{Get\+Resource\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of resources loaded. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_manager_a8cc0c523af7e6e454ed0f273b5f18e4a}\label{classsfmlbe_1_1_resource_manager_a8cc0c523af7e6e454ed0f273b5f18e4a}} 
+class {\bfseries Singleton$<$ Resource\+Manager $>$}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class representing a Manager for all the resources. Provide an interface to load and unload resources easily, and to retreive them from anywhere. Use a scope system to provide multiple occurences of a resource and manage multiple contexts easier. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_manager_ae7496b805297eef8c8315ab2437c008c}\label{classsfmlbe_1_1_resource_manager_ae7496b805297eef8c8315ab2437c008c}} 
+\index{sfmlbe\+::\+Resource\+Manager@{sfmlbe\+::\+Resource\+Manager}!Clear@{Clear}}
+\index{Clear@{Clear}!sfmlbe\+::\+Resource\+Manager@{sfmlbe\+::\+Resource\+Manager}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Resource\+Manager\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear all the scopes. 
+
+Free memory for all the resources in all scopes, and delete everthing. Reset the \mbox{\hyperlink{classsfmlbe_1_1_resource_manager}{Resource\+Manager}}. \begin{DoxySeeAlso}{See also}
+Clear(const std\+::string \& scopename) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_manager_a2d25aeeab0779847e3c010ab89c50d0f}\label{classsfmlbe_1_1_resource_manager_a2d25aeeab0779847e3c010ab89c50d0f}} 
+\index{sfmlbe\+::\+Resource\+Manager@{sfmlbe\+::\+Resource\+Manager}!Clear\+Scope@{Clear\+Scope}}
+\index{Clear\+Scope@{Clear\+Scope}!sfmlbe\+::\+Resource\+Manager@{sfmlbe\+::\+Resource\+Manager}}
+\subsubsection{\texorpdfstring{Clear\+Scope()}{ClearScope()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Resource\+Manager\+::\+Clear\+Scope (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{scopename }\end{DoxyParamCaption})}
+
+
+
+Clear the scope targeted. 
+
+Free memory for all the resources in the scope, and delete it. If he does not exist, do nothing. 
+\begin{DoxyParams}{Parameters}
+{\em scopename} & Name of the scope to clear. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_manager_ae7496b805297eef8c8315ab2437c008c}{Clear()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_manager_aea559b11d248db65d6bff0caf902098a}\label{classsfmlbe_1_1_resource_manager_aea559b11d248db65d6bff0caf902098a}} 
+\index{sfmlbe\+::\+Resource\+Manager@{sfmlbe\+::\+Resource\+Manager}!Find\+Resource\+By\+ID@{Find\+Resource\+By\+ID}}
+\index{Find\+Resource\+By\+ID@{Find\+Resource\+By\+ID}!sfmlbe\+::\+Resource\+Manager@{sfmlbe\+::\+Resource\+Manager}}
+\subsubsection{\texorpdfstring{Find\+Resource\+By\+I\+D()}{FindResourceByID()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}}$\ast$ sfmlbe\+::\+Resource\+Manager\+::\+Find\+Resource\+By\+ID (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ID }\end{DoxyParamCaption})}
+
+
+
+Get a reference on the \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} requested. 
+
+Return the first occurrence of the \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} requested in all scopes loaded. \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} could be any type listed in R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+T\+Y\+PE. 
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classsfmlbe_1_1_resource_not_found_exception}{sfmlbe\+::\+Resource\+Not\+Found\+Exception}}} & if the resource is not found in any scope. \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & ID of the resource . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference on the \mbox{\hyperlink{classsfmlbe_1_1_resource}{sfmlbe\+::\+Resource}} or throws exception. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_manager_a7aa9e19b0a5d525a92ac698ad6497487}{Find\+Resource\+By\+I\+D(const std\+::string \& I\+D, const std\+::string \& scope)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_manager_a7aa9e19b0a5d525a92ac698ad6497487}\label{classsfmlbe_1_1_resource_manager_a7aa9e19b0a5d525a92ac698ad6497487}} 
+\index{sfmlbe\+::\+Resource\+Manager@{sfmlbe\+::\+Resource\+Manager}!Find\+Resource\+By\+ID@{Find\+Resource\+By\+ID}}
+\index{Find\+Resource\+By\+ID@{Find\+Resource\+By\+ID}!sfmlbe\+::\+Resource\+Manager@{sfmlbe\+::\+Resource\+Manager}}
+\subsubsection{\texorpdfstring{Find\+Resource\+By\+I\+D()}{FindResourceByID()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}}$\ast$ sfmlbe\+::\+Resource\+Manager\+::\+Find\+Resource\+By\+ID (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ID,  }\item[{const std\+::string \&}]{scope }\end{DoxyParamCaption})}
+
+
+
+Get a reference on the \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} requested. 
+
+Return the occurence of the \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} requested in the scope targeted. \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} could be any type listed in R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+T\+Y\+PE. 
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classsfmlbe_1_1_resource_not_found_exception}{sfmlbe\+::\+Resource\+Not\+Found\+Exception}}} & if the resource is not found in the scope. \\
+\hline
+{\em \mbox{\hyperlink{classsfmlbe_1_1_scope_not_found_exception}{sfmlbe\+::\+Scope\+Not\+Found\+Exception}}} & if the scope is not found. \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & ID of the resource. \\
+\hline
+{\em scope} & Name of the scope where to search the resource. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference on the \mbox{\hyperlink{classsfmlbe_1_1_resource}{sfmlbe\+::\+Resource}} or throws exception. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_manager_aea559b11d248db65d6bff0caf902098a}{Find\+Resource\+By\+I\+D(const std\+::string \& I\+D)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_manager_a99c69873bb1084afe35a97986c657ee9}\label{classsfmlbe_1_1_resource_manager_a99c69873bb1084afe35a97986c657ee9}} 
+\index{sfmlbe\+::\+Resource\+Manager@{sfmlbe\+::\+Resource\+Manager}!Get\+Resource\+Count@{Get\+Resource\+Count}}
+\index{Get\+Resource\+Count@{Get\+Resource\+Count}!sfmlbe\+::\+Resource\+Manager@{sfmlbe\+::\+Resource\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Resource\+Count()}{GetResourceCount()}}
+{\footnotesize\ttfamily U\+I\+NT sfmlbe\+::\+Resource\+Manager\+::\+Get\+Resource\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the number of resources loaded. 
+
+\begin{DoxyReturn}{Returns}
+Number of resources loaded. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_manager_a8f99da24868d355227f641dc50db2bd2}\label{classsfmlbe_1_1_resource_manager_a8f99da24868d355227f641dc50db2bd2}} 
+\index{sfmlbe\+::\+Resource\+Manager@{sfmlbe\+::\+Resource\+Manager}!Load\+From\+File\+X\+ML@{Load\+From\+File\+X\+ML}}
+\index{Load\+From\+File\+X\+ML@{Load\+From\+File\+X\+ML}!sfmlbe\+::\+Resource\+Manager@{sfmlbe\+::\+Resource\+Manager}}
+\subsubsection{\texorpdfstring{Load\+From\+File\+X\+M\+L()}{LoadFromFileXML()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Resource\+Manager\+::\+Load\+From\+File\+X\+ML (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Load \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} indexed in the X\+ML file targeted. 
+
+Try to load every resource indexed in the filename in the first valid scope. Creates the scope or appends the resources if the scope already exists. If some identical keys are already in it, they will be replaced ! Filename and resources need to be in the data folder (see examples). 
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the indexer where all the resources are listes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_manager_a2da403b4057837350f5e09f0a33b80dd}{Load\+From\+File\+X\+M\+L(const std\+::string \& filename, const std\+::string \& scopename)}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_manager_a99707b50bdf61ac1daadd65027a1ae2b}{Load\+From\+File\+X\+M\+L(const std\+::string \& filename, const std\+::string \& scopename, const std\+::string \& scope\+\_\+target)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_manager_a2da403b4057837350f5e09f0a33b80dd}\label{classsfmlbe_1_1_resource_manager_a2da403b4057837350f5e09f0a33b80dd}} 
+\index{sfmlbe\+::\+Resource\+Manager@{sfmlbe\+::\+Resource\+Manager}!Load\+From\+File\+X\+ML@{Load\+From\+File\+X\+ML}}
+\index{Load\+From\+File\+X\+ML@{Load\+From\+File\+X\+ML}!sfmlbe\+::\+Resource\+Manager@{sfmlbe\+::\+Resource\+Manager}}
+\subsubsection{\texorpdfstring{Load\+From\+File\+X\+M\+L()}{LoadFromFileXML()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Resource\+Manager\+::\+Load\+From\+File\+X\+ML (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{const std\+::string \&}]{scopename }\end{DoxyParamCaption})}
+
+
+
+Load \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} indexed in the X\+ML file targeted with a targeted scope. 
+
+Try to load every resource indexed in the filename in the targeted scope. Creates the scope or appends the resources if the scope already exists. If some identical keys are already in it, they will be replaced ! Filename and resources need to be in the data folder (see examples). 
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the indexer where all the resources are listes. \\
+\hline
+{\em scopename} & Name of the scope wanted in filename. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_manager_a8f99da24868d355227f641dc50db2bd2}{Load\+From\+File\+X\+M\+L()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_manager_a99707b50bdf61ac1daadd65027a1ae2b}{Load\+From\+File\+X\+M\+L(const std\+::string \& filename, const std\+::string \& scopename, const std\+::string \& scope\+\_\+target)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_manager_a99707b50bdf61ac1daadd65027a1ae2b}\label{classsfmlbe_1_1_resource_manager_a99707b50bdf61ac1daadd65027a1ae2b}} 
+\index{sfmlbe\+::\+Resource\+Manager@{sfmlbe\+::\+Resource\+Manager}!Load\+From\+File\+X\+ML@{Load\+From\+File\+X\+ML}}
+\index{Load\+From\+File\+X\+ML@{Load\+From\+File\+X\+ML}!sfmlbe\+::\+Resource\+Manager@{sfmlbe\+::\+Resource\+Manager}}
+\subsubsection{\texorpdfstring{Load\+From\+File\+X\+M\+L()}{LoadFromFileXML()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Resource\+Manager\+::\+Load\+From\+File\+X\+ML (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{const std\+::string \&}]{scopename,  }\item[{const std\+::string \&}]{scope\+\_\+target }\end{DoxyParamCaption})}
+
+
+
+Load \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} indexed in the X\+ML file targeted with a targeted scope and add them to another scope. 
+
+Try to load every resource indexed in the filename in the targeted scope and append them to anoter scope. Creates the scope targeted or appends the resources if the scope already exists. If some identical keys are already in it, they will be replaced ! Filename and resources need to be in the data folder (see examples). 
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the indexer where all the resources are listes. \\
+\hline
+{\em scopename} & Name of the scope wanted in filename. \\
+\hline
+{\em scope\+\_\+target} & Name of the scope where append resources. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_manager_a8f99da24868d355227f641dc50db2bd2}{Load\+From\+File\+X\+M\+L()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_manager_a2da403b4057837350f5e09f0a33b80dd}{Load\+From\+File\+X\+M\+L(const std\+::string \& filename, const std\+::string \& scopename)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_manager_a74e64d1b098dcdbc0ee4fd8925303523}\label{classsfmlbe_1_1_resource_manager_a74e64d1b098dcdbc0ee4fd8925303523}} 
+\index{sfmlbe\+::\+Resource\+Manager@{sfmlbe\+::\+Resource\+Manager}!Print\+Manager@{Print\+Manager}}
+\index{Print\+Manager@{Print\+Manager}!sfmlbe\+::\+Resource\+Manager@{sfmlbe\+::\+Resource\+Manager}}
+\subsubsection{\texorpdfstring{Print\+Manager()}{PrintManager()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Resource\+Manager\+::\+Print\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print all the resources in the \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} Manager. 
+
+Do what it says. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+dev/header/\mbox{\hyperlink{resourcemanager_8hpp}{resourcemanager.\+hpp}}\end{DoxyCompactItemize}

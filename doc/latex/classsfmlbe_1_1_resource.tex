@@ -1,0 +1,245 @@
+\hypertarget{classsfmlbe_1_1_resource}{}\section{sfmlbe\+:\+:Resource Class Reference}
+\label{classsfmlbe_1_1_resource}\index{sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}}
+
+
+{\ttfamily \#include $<$resource.\+hpp$>$}
+
+Inheritance diagram for sfmlbe\+:\+:Resource\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.197861cm]{classsfmlbe_1_1_resource}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsfmlbe_1_1_resource_afc4c45a3b69da3904ab98d8096a5dbf6}{Resource}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsfmlbe_1_1_resource_a93030eb6f15353680a352fe10b204842}{Resource}} (std\+::string ID, std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classsfmlbe_1_1_resource_a54ad6b8a18e74283c707ec1622c94f9f}{$\sim$\+Resource}} ()
+\begin{DoxyCompactList}\small\item\em Virtual descructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsfmlbe_1_1_resource_a35981869a1e90ebbf30258ff7aa1d6d2}{Load}} ()=0
+\begin{DoxyCompactList}\small\item\em Virtual member. Used to load the resource. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsfmlbe_1_1_resource_a48c75a88679cf457965dd013f47014b9}{Unload}} ()=0
+\begin{DoxyCompactList}\small\item\em Virtual member. Used to unload the resource. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_resource_a5f3c845ac15aa355434fe79baca5a019}{Set\+Resource\+ID}} (std\+::string ID)
+\begin{DoxyCompactList}\small\item\em Set the resource ID. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classsfmlbe_1_1_resource_ae1fb20f1b0e913db9714be96612556c0}{Get\+Resource\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Get the resource ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_resource_a219b033dc969ca0860bf7402da27107d}{Set\+Filename}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Set the resource filename. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classsfmlbe_1_1_resource_ae76151a96999e65307a625d1b57cdc80}{Get\+Filename}} () const
+\begin{DoxyCompactList}\small\item\em Get the resource filename. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_resource_a6d4c41250bf66f2fe81d4a53d867c4ed}{Set\+Resource\+Type}} (\mbox{\hyperlink{namespacesfmlbe_ac4335ed3060bba025f73e01f9dccb2dd}{R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+T\+Y\+PE}} type)
+\begin{DoxyCompactList}\small\item\em Set the resource type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesfmlbe_ac4335ed3060bba025f73e01f9dccb2dd}{R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{classsfmlbe_1_1_resource_a8e0ab17344e90a3c1175a8aa87a96c35}{Get\+Resource\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Get the resource type. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsfmlbe_1_1_resource_acd0812c81f7d5d851a4671f0cf7bb4f1}{Is\+Loaded}} () const
+\begin{DoxyCompactList}\small\item\em Get if the resource is loaded. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_a9b6ee23d56d056a440005ac7fb0445ab}\label{classsfmlbe_1_1_resource_a9b6ee23d56d056a440005ac7fb0445ab}} 
+std\+::string {\bfseries m\+\_\+resource\+ID}
+\item 
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_a6819f8b382e2e471a4209731c5b79064}\label{classsfmlbe_1_1_resource_a6819f8b382e2e471a4209731c5b79064}} 
+std\+::string {\bfseries m\+\_\+filename}
+\item 
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_a5f995a7e9f6813a2cb3a1d2f01145410}\label{classsfmlbe_1_1_resource_a5f995a7e9f6813a2cb3a1d2f01145410}} 
+\mbox{\hyperlink{namespacesfmlbe_ac4335ed3060bba025f73e01f9dccb2dd}{R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+T\+Y\+PE}} {\bfseries m\+\_\+type}
+\item 
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_a666c78b37688c4c1a389850f193e97ea}\label{classsfmlbe_1_1_resource_a666c78b37688c4c1a389850f193e97ea}} 
+bool {\bfseries m\+\_\+loaded}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Virtual class representing a \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}}. Can be any type of resource listed in R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+T\+Y\+PE, but every type need to be implemented in a child clas, and the \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} Manager need to be updated. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_afc4c45a3b69da3904ab98d8096a5dbf6}\label{classsfmlbe_1_1_resource_afc4c45a3b69da3904ab98d8096a5dbf6}} 
+\index{sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}!Resource@{Resource}}
+\index{Resource@{Resource}!sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}}
+\subsubsection{\texorpdfstring{Resource()}{Resource()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sfmlbe\+::\+Resource\+::\+Resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+Construct a non loaded null resource. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_a93030eb6f15353680a352fe10b204842}{Resource(std\+::string I\+D, std\+::string filename)}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_a54ad6b8a18e74283c707ec1622c94f9f}{$\sim$\+Resource()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_a93030eb6f15353680a352fe10b204842}\label{classsfmlbe_1_1_resource_a93030eb6f15353680a352fe10b204842}} 
+\index{sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}!Resource@{Resource}}
+\index{Resource@{Resource}!sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}}
+\subsubsection{\texorpdfstring{Resource()}{Resource()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sfmlbe\+::\+Resource\+::\+Resource (\begin{DoxyParamCaption}\item[{std\+::string}]{ID,  }\item[{std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+Construct a non loaded null resource, but with provided parameters. 
+\begin{DoxyParams}{Parameters}
+{\em ID} & ID of the resource in the scope specified. \\
+\hline
+{\em filename} & Relative path of file from where the resource is loaded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_afc4c45a3b69da3904ab98d8096a5dbf6}{Resource()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_a54ad6b8a18e74283c707ec1622c94f9f}{$\sim$\+Resource()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_a54ad6b8a18e74283c707ec1622c94f9f}\label{classsfmlbe_1_1_resource_a54ad6b8a18e74283c707ec1622c94f9f}} 
+\index{sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}!````~Resource@{$\sim$\+Resource}}
+\index{````~Resource@{$\sim$\+Resource}!sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}}
+\subsubsection{\texorpdfstring{$\sim$\+Resource()}{~Resource()}}
+{\footnotesize\ttfamily virtual sfmlbe\+::\+Resource\+::$\sim$\+Resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual descructor. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_afc4c45a3b69da3904ab98d8096a5dbf6}{Resource()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_a93030eb6f15353680a352fe10b204842}{Resource(std\+::string I\+D, std\+::string filename)}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_ae76151a96999e65307a625d1b57cdc80}\label{classsfmlbe_1_1_resource_ae76151a96999e65307a625d1b57cdc80}} 
+\index{sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}!Get\+Filename@{Get\+Filename}}
+\index{Get\+Filename@{Get\+Filename}!sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}}
+\subsubsection{\texorpdfstring{Get\+Filename()}{GetFilename()}}
+{\footnotesize\ttfamily std\+::string sfmlbe\+::\+Resource\+::\+Get\+Filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the resource filename. 
+
+\begin{DoxyReturn}{Returns}
+Filename of the resource. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_ae1fb20f1b0e913db9714be96612556c0}\label{classsfmlbe_1_1_resource_ae1fb20f1b0e913db9714be96612556c0}} 
+\index{sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}!Get\+Resource\+ID@{Get\+Resource\+ID}}
+\index{Get\+Resource\+ID@{Get\+Resource\+ID}!sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}}
+\subsubsection{\texorpdfstring{Get\+Resource\+I\+D()}{GetResourceID()}}
+{\footnotesize\ttfamily std\+::string sfmlbe\+::\+Resource\+::\+Get\+Resource\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the resource ID. 
+
+\begin{DoxyReturn}{Returns}
+ID of the resource. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_a8e0ab17344e90a3c1175a8aa87a96c35}\label{classsfmlbe_1_1_resource_a8e0ab17344e90a3c1175a8aa87a96c35}} 
+\index{sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}!Get\+Resource\+Type@{Get\+Resource\+Type}}
+\index{Get\+Resource\+Type@{Get\+Resource\+Type}!sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}}
+\subsubsection{\texorpdfstring{Get\+Resource\+Type()}{GetResourceType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesfmlbe_ac4335ed3060bba025f73e01f9dccb2dd}{R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+T\+Y\+PE}} sfmlbe\+::\+Resource\+::\+Get\+Resource\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the resource type. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} type of the resource. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_acd0812c81f7d5d851a4671f0cf7bb4f1}\label{classsfmlbe_1_1_resource_acd0812c81f7d5d851a4671f0cf7bb4f1}} 
+\index{sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}!Is\+Loaded@{Is\+Loaded}}
+\index{Is\+Loaded@{Is\+Loaded}!sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}}
+\subsubsection{\texorpdfstring{Is\+Loaded()}{IsLoaded()}}
+{\footnotesize\ttfamily bool sfmlbe\+::\+Resource\+::\+Is\+Loaded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get if the resource is loaded. 
+
+\begin{DoxyReturn}{Returns}
+Is the resource is loaded. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_a35981869a1e90ebbf30258ff7aa1d6d2}\label{classsfmlbe_1_1_resource_a35981869a1e90ebbf30258ff7aa1d6d2}} 
+\index{sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}!Load@{Load}}
+\index{Load@{Load}!sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily virtual void sfmlbe\+::\+Resource\+::\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Virtual member. Used to load the resource. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_a48c75a88679cf457965dd013f47014b9}{Unload()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classsfmlbe_1_1_resource_text_a1176965f3e9d26c618688f7899b4b58b}{sfmlbe\+::\+Resource\+Text}}, \mbox{\hyperlink{classsfmlbe_1_1_resource_font_a8629842a4597fa4c22e58a85ae76bc74}{sfmlbe\+::\+Resource\+Font}}, \mbox{\hyperlink{classsfmlbe_1_1_resource_music_a8d612eff1f1f8847c2b96a616456e558}{sfmlbe\+::\+Resource\+Music}}, \mbox{\hyperlink{classsfmlbe_1_1_resource_sound_buffer_a1207531bb0e5355f90cf4a7f67734555}{sfmlbe\+::\+Resource\+Sound\+Buffer}}, and \mbox{\hyperlink{classsfmlbe_1_1_resource_texture_a4f8d27c8e50efce6d66a30edb078e2d3}{sfmlbe\+::\+Resource\+Texture}}.
+
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_a219b033dc969ca0860bf7402da27107d}\label{classsfmlbe_1_1_resource_a219b033dc969ca0860bf7402da27107d}} 
+\index{sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}!Set\+Filename@{Set\+Filename}}
+\index{Set\+Filename@{Set\+Filename}!sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}}
+\subsubsection{\texorpdfstring{Set\+Filename()}{SetFilename()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Resource\+::\+Set\+Filename (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the resource filename. 
+
+Careful with the use of this function. This function does not unload the \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} but set the resource as not loaded. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & New filename for the resource. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_a5f3c845ac15aa355434fe79baca5a019}\label{classsfmlbe_1_1_resource_a5f3c845ac15aa355434fe79baca5a019}} 
+\index{sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}!Set\+Resource\+ID@{Set\+Resource\+ID}}
+\index{Set\+Resource\+ID@{Set\+Resource\+ID}!sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}}
+\subsubsection{\texorpdfstring{Set\+Resource\+I\+D()}{SetResourceID()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Resource\+::\+Set\+Resource\+ID (\begin{DoxyParamCaption}\item[{std\+::string}]{ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the resource ID. 
+
+Careful with the use of this function. This function does not unload or test if the resource name is unique in his scope. 
+\begin{DoxyParams}{Parameters}
+{\em ID} & New ID for the resource. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_a6d4c41250bf66f2fe81d4a53d867c4ed}\label{classsfmlbe_1_1_resource_a6d4c41250bf66f2fe81d4a53d867c4ed}} 
+\index{sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}!Set\+Resource\+Type@{Set\+Resource\+Type}}
+\index{Set\+Resource\+Type@{Set\+Resource\+Type}!sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}}
+\subsubsection{\texorpdfstring{Set\+Resource\+Type()}{SetResourceType()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Resource\+::\+Set\+Resource\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesfmlbe_ac4335ed3060bba025f73e01f9dccb2dd}{R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+T\+Y\+PE}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the resource type. 
+
+Careful with the use of this function. This function does not change the \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} class, but set as not loaded. 
+\begin{DoxyParams}{Parameters}
+{\em type} & New type for the resource. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_a48c75a88679cf457965dd013f47014b9}\label{classsfmlbe_1_1_resource_a48c75a88679cf457965dd013f47014b9}} 
+\index{sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}!Unload@{Unload}}
+\index{Unload@{Unload}!sfmlbe\+::\+Resource@{sfmlbe\+::\+Resource}}
+\subsubsection{\texorpdfstring{Unload()}{Unload()}}
+{\footnotesize\ttfamily virtual void sfmlbe\+::\+Resource\+::\+Unload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Virtual member. Used to unload the resource. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_a35981869a1e90ebbf30258ff7aa1d6d2}{Load()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classsfmlbe_1_1_resource_text_a7493d044dfcd376b0fd17fd5fbd52ada}{sfmlbe\+::\+Resource\+Text}}, \mbox{\hyperlink{classsfmlbe_1_1_resource_font_a44911079325cd8fcf3f2bce64c58ff86}{sfmlbe\+::\+Resource\+Font}}, \mbox{\hyperlink{classsfmlbe_1_1_resource_music_a5697430030c12a5850f317147feb059f}{sfmlbe\+::\+Resource\+Music}}, \mbox{\hyperlink{classsfmlbe_1_1_resource_sound_buffer_aea7707b97d4451935597671c0e162a7b}{sfmlbe\+::\+Resource\+Sound\+Buffer}}, and \mbox{\hyperlink{classsfmlbe_1_1_resource_texture_ac8b1b5866242e222abf0385144711646}{sfmlbe\+::\+Resource\+Texture}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+dev/header/\mbox{\hyperlink{resource_8hpp}{resource.\+hpp}}\end{DoxyCompactItemize}

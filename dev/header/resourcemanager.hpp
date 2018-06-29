@@ -136,13 +136,31 @@ class ResourceManager : public sfmlbe::Singleton<ResourceManager>
         */
 		~ResourceManager() {Clear();};
 
-		void ParseXMLTree(tinyxml2::XMLNode * root, std::string path);												//Recursive function to parse XML tree
-		tr::Resource * CreateResource(const tinyxml2::XMLElement * element, const std::string & path); 				//Function to create (but not load) resource
-		void LoadPendingResources(const std::string & scope_target);																//Load the resources not alreadys loaded
+		//! Recursive function to parse XML tree.
+        /*!
+            \param root Reference on the XMLNode where the parsing will begin.
+			\param path Current path of the file in before the node.
+        */
+		void ParseXMLTree(tinyxml2::XMLNode * root, std::string path);
 
-		std::vector<Resource *> m_listOfPendingResources;															//Resources creates but not stored
-		UINT m_resourceCount; 																//Total number of resources loaded
-	    std::map<std::string, std::map<std::string, Resource *> * > m_resources; 			//Map of form <scope ID, Resource map>
+		//! Function that create the resource associeted to the element.
+        /*!
+            \param element XML element where the information will be taken to construct the sfmlbe::Resource.
+			\param path Current path of the file in before the element.
+			\return A reference on the resource (non loaded) created.
+			\throw sfmlbe::ResourceNotLoadException if the resource was not created.
+        */
+		tr::Resource * CreateResource(const tinyxml2::XMLElement * element, const std::string & path);
+
+		//! Load the resources that are not already loaded
+        /*!
+            \param scope_target Scope where to append the sfmlbe::Resources
+        */
+		void LoadPendingResources(const std::string & scope_target);
+
+		std::vector<Resource *> m_listOfPendingResources;							//Resources creates but not stored
+		UINT m_resourceCount; 														//Total number of resources loaded
+	    std::map<std::string, std::map<std::string, Resource *> * > m_resources; 	//Map of form <scope ID, Resource map>
 };
 
 }

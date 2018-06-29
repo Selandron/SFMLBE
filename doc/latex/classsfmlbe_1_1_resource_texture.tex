@@ -1,0 +1,135 @@
+\hypertarget{classsfmlbe_1_1_resource_texture}{}\section{sfmlbe\+:\+:Resource\+Texture Class Reference}
+\label{classsfmlbe_1_1_resource_texture}\index{sfmlbe\+::\+Resource\+Texture@{sfmlbe\+::\+Resource\+Texture}}
+
+
+{\ttfamily \#include $<$resourcetexture.\+hpp$>$}
+
+Inheritance diagram for sfmlbe\+:\+:Resource\+Texture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsfmlbe_1_1_resource_texture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsfmlbe_1_1_resource_texture_aa1a489c8fe125057b3009f6615093118}{Resource\+Texture}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsfmlbe_1_1_resource_texture_a458e1b22fd5074534d86f2665637ae34}{Resource\+Texture}} (std\+::string ID, std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsfmlbe_1_1_resource_texture_a98789b46742a42adffffe0abed982184}{$\sim$\+Resource\+Texture}} ()
+\begin{DoxyCompactList}\small\item\em Descructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_resource_texture_a4f8d27c8e50efce6d66a30edb078e2d3}{Load}} ()
+\begin{DoxyCompactList}\small\item\em Load the sf\+::\+Texture targeted by this resource. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_resource_texture_ac8b1b5866242e222abf0385144711646}{Unload}} ()
+\begin{DoxyCompactList}\small\item\em Unload the sf\+::\+Texture targeted by this resource. \end{DoxyCompactList}\item 
+sf\+::\+Texture $\ast$ \mbox{\hyperlink{classsfmlbe_1_1_resource_texture_a354d8f497b1ea0ca39c467219edc76c7}{Get\+Texture}} ()
+\begin{DoxyCompactList}\small\item\em Get the sf\+::\+Texture associed to this resource. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class allowing to store a sf\+::\+Texture using the S\+F\+M\+L\+BE \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} Manager system. Provide an interface to load and unload texture easily. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_texture_aa1a489c8fe125057b3009f6615093118}\label{classsfmlbe_1_1_resource_texture_aa1a489c8fe125057b3009f6615093118}} 
+\index{sfmlbe\+::\+Resource\+Texture@{sfmlbe\+::\+Resource\+Texture}!Resource\+Texture@{Resource\+Texture}}
+\index{Resource\+Texture@{Resource\+Texture}!sfmlbe\+::\+Resource\+Texture@{sfmlbe\+::\+Resource\+Texture}}
+\subsubsection{\texorpdfstring{Resource\+Texture()}{ResourceTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sfmlbe\+::\+Resource\+Texture\+::\+Resource\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Construct a non loaded texture resource. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_texture_a458e1b22fd5074534d86f2665637ae34}{Resource\+Texture(std\+::string I\+D, std\+::string filename)}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_texture_a98789b46742a42adffffe0abed982184}{$\sim$\+Resource\+Texture()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_texture_a458e1b22fd5074534d86f2665637ae34}\label{classsfmlbe_1_1_resource_texture_a458e1b22fd5074534d86f2665637ae34}} 
+\index{sfmlbe\+::\+Resource\+Texture@{sfmlbe\+::\+Resource\+Texture}!Resource\+Texture@{Resource\+Texture}}
+\index{Resource\+Texture@{Resource\+Texture}!sfmlbe\+::\+Resource\+Texture@{sfmlbe\+::\+Resource\+Texture}}
+\subsubsection{\texorpdfstring{Resource\+Texture()}{ResourceTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sfmlbe\+::\+Resource\+Texture\+::\+Resource\+Texture (\begin{DoxyParamCaption}\item[{std\+::string}]{ID,  }\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Construct a non loaded texture resource, but with provided parameters. 
+\begin{DoxyParams}{Parameters}
+{\em ID} & ID of the resource in the scope specified. \\
+\hline
+{\em filename} & Relative path of file from where the resource is loaded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_texture_aa1a489c8fe125057b3009f6615093118}{Resource\+Texture()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_texture_a98789b46742a42adffffe0abed982184}{$\sim$\+Resource\+Texture()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_texture_a98789b46742a42adffffe0abed982184}\label{classsfmlbe_1_1_resource_texture_a98789b46742a42adffffe0abed982184}} 
+\index{sfmlbe\+::\+Resource\+Texture@{sfmlbe\+::\+Resource\+Texture}!````~Resource\+Texture@{$\sim$\+Resource\+Texture}}
+\index{````~Resource\+Texture@{$\sim$\+Resource\+Texture}!sfmlbe\+::\+Resource\+Texture@{sfmlbe\+::\+Resource\+Texture}}
+\subsubsection{\texorpdfstring{$\sim$\+Resource\+Texture()}{~ResourceTexture()}}
+{\footnotesize\ttfamily sfmlbe\+::\+Resource\+Texture\+::$\sim$\+Resource\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Descructor. 
+
+Free memory used by the sf\+::\+Texture and this resource. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_texture_aa1a489c8fe125057b3009f6615093118}{Resource\+Texture()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_texture_a458e1b22fd5074534d86f2665637ae34}{Resource\+Texture(std\+::string I\+D, std\+::string filename)}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_texture_a354d8f497b1ea0ca39c467219edc76c7}\label{classsfmlbe_1_1_resource_texture_a354d8f497b1ea0ca39c467219edc76c7}} 
+\index{sfmlbe\+::\+Resource\+Texture@{sfmlbe\+::\+Resource\+Texture}!Get\+Texture@{Get\+Texture}}
+\index{Get\+Texture@{Get\+Texture}!sfmlbe\+::\+Resource\+Texture@{sfmlbe\+::\+Resource\+Texture}}
+\subsubsection{\texorpdfstring{Get\+Texture()}{GetTexture()}}
+{\footnotesize\ttfamily sf\+::\+Texture$\ast$ sfmlbe\+::\+Resource\+Texture\+::\+Get\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the sf\+::\+Texture associed to this resource. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the sf\+::\+Texture or N\+U\+LL. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_texture_a4f8d27c8e50efce6d66a30edb078e2d3}\label{classsfmlbe_1_1_resource_texture_a4f8d27c8e50efce6d66a30edb078e2d3}} 
+\index{sfmlbe\+::\+Resource\+Texture@{sfmlbe\+::\+Resource\+Texture}!Load@{Load}}
+\index{Load@{Load}!sfmlbe\+::\+Resource\+Texture@{sfmlbe\+::\+Resource\+Texture}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Resource\+Texture\+::\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Load the sf\+::\+Texture targeted by this resource. 
+
+If success set this resource as loaded. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_texture_ac8b1b5866242e222abf0385144711646}{Unload()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_acd0812c81f7d5d851a4671f0cf7bb4f1}{Is\+Loaded()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classsfmlbe_1_1_resource_a35981869a1e90ebbf30258ff7aa1d6d2}{sfmlbe\+::\+Resource}}.
+
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_texture_ac8b1b5866242e222abf0385144711646}\label{classsfmlbe_1_1_resource_texture_ac8b1b5866242e222abf0385144711646}} 
+\index{sfmlbe\+::\+Resource\+Texture@{sfmlbe\+::\+Resource\+Texture}!Unload@{Unload}}
+\index{Unload@{Unload}!sfmlbe\+::\+Resource\+Texture@{sfmlbe\+::\+Resource\+Texture}}
+\subsubsection{\texorpdfstring{Unload()}{Unload()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Resource\+Texture\+::\+Unload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Unload the sf\+::\+Texture targeted by this resource. 
+
+If success set this resource as unloaded. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_texture_a4f8d27c8e50efce6d66a30edb078e2d3}{Load()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_acd0812c81f7d5d851a4671f0cf7bb4f1}{Is\+Loaded()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classsfmlbe_1_1_resource_a48c75a88679cf457965dd013f47014b9}{sfmlbe\+::\+Resource}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+dev/header/\mbox{\hyperlink{resourcetexture_8hpp}{resourcetexture.\+hpp}}\end{DoxyCompactItemize}

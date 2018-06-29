@@ -14,7 +14,7 @@
 namespace sfmlbe
 {
 
-/*!
+/*! \enum RESOURCE_TYPE
     Enum defining every type of resource possible.
 */
 enum RESOURCE_TYPE
@@ -27,22 +27,108 @@ enum RESOURCE_TYPE
     RESOURCE_FONT = 5, /*!< Represent a font resource. */
 }
 
-
-#define _GET_TEXTURE(key) ((tr::ResourceTexture *)(tr::ResourceManager::GetInstance()->FindResourceByID(key)))->GetTexture()
-#define _GET_TEXTURE_SCOPE(key, scope) ((tr::ResourceTexture *)(tr::ResourceManager::GetInstance()->FindResourceByID(key, scope)))->GetTexture()
-
-#define _GET_SOUNDBUFFER(key) ((tr::ResourceSoundBuffer *)(tr::ResourceManager::GetInstance()->FindResourceByID(key)))->GetSoundBuffer()
-#define _GET_SOUNDBUFFER_SCOPE(key, scope) ((tr::ResourceSoundBuffer *)(tr::ResourceManager::GetInstance()->FindResourceByID(key, scope)))->GetSoundBuffer()
-
-#define _GET_MUSIC(key) ((tr::ResourceMusic *)(tr::ResourceManager::GetInstance()->FindResourceByID(key)))->GetMusic()
-#define _GET_MUSIC_SCOPE(key, scope) ((tr::ResourceMusic *)(tr::ResourceManager::GetInstance()->FindResourceByID(key, scope)))->GetMusic()
-
-#define _GET_FONT(key) ((tr::ResourceFont *)(tr::ResourceManager::GetInstance()->FindResourceByID(key)))->GetFont()
-#define _GET_FONT_SCOPE(key, scope) ((tr::ResourceFont *)(tr::ResourceManager::GetInstance()->FindResourceByID(key, scope)))->GetFont()
-
-#define _GET_TEXT(key, key_text) ((tr::ResourceText *)(tr::ResourceManager::GetInstance()->FindResourceByID(key)))->GetText(key_text)
-#define _GET_TEXT_SCOPE(key, scope, key_text) ((tr::ResourceText *)(tr::ResourceManager::GetInstance()->FindResourceByID(key, scope)))->GetText(key_text)
-
 }
 
+
+/*!
+    \def _GET_SOUNDBUFFER(key)
+    Get the sfml::SoundBuffer from a key.
+    \param key String used for ID to search the resource.
+    \return First sfml::SoundBuffer * where the id equal to key.
+    \throw sfmlbe::ResourceNotFoundException if the resource is not found in any scope.
+ */
+#define _GET_SOUNDBUFFER(key) ((sfmlbe::ResourceSoundBuffer *)(sfmlbe::ResourceManager::GetInstance()->FindResourceByID(key)))->GetSoundBuffer()
+
+/*!
+    \def _GET_SOUNDBUFFER_SCOPE(key, scope)
+    Get the sfml::SoundBuffer from a key and a specified scope.
+    \param key String used for ID to search the resource.
+    \param scope String for the defined scope.
+    \return First sfml::SoundBuffer * where the id equal to key.
+    \throw sfmlbe::ResourceNotFoundException if the resource is not found in any scope.
+    \throw sfmlbe::ScopeNotFoundException if the scope is not found.
+ */
+#define _GET_SOUNDBUFFER_SCOPE(key, scope) ((sfmlbe::ResourceSoundBuffer *)(sfmlbe::ResourceManager::GetInstance()->FindResourceByID(key, scope)))->GetSoundBuffer()
+
+/*!
+    \def _GET_TEXTURE(key)
+    Get the sfml::Texture from a key.
+    \param key String used for ID to search the resource.
+    \return First sfml::Texture * where the id equal to key.
+    \throw sfmlbe::ResourceNotFoundException if the resource is not found in any scope.
+ */
+#define _GET_TEXTURE(key) ((sfmlbe::ResourceTexture *)(sfmlbe::ResourceManager::GetInstance()->FindResourceByID(key)))->GetTexture()
+
+/*!
+    \def _GET_TEXTURE_SCOPE(key, scope)
+    Get the sfml::Texture from a key and a specified scope.
+    \param key String used for ID to search the resource.
+    \param scope String for the defined scope.
+    \return First sfml::Texture * where the id equal to key.
+    \throw sfmlbe::ResourceNotFoundException if the resource is not found in any scope.
+    \throw sfmlbe::ScopeNotFoundException if the scope is not found.
+ */
+#define _GET_TEXTURE_SCOPE(key, scope) ((sfmlbe::ResourceTexture *)(sfmlbe::ResourceManager::GetInstance()->FindResourceByID(key, scope)))->GetTexture()
+
+/*!
+    \def _GET_MUSIC(key)
+    Get the sfml::Music from a key.
+    \param key String used for ID to search the resource.
+    \return First sfml::Music * where the id equal to key.
+    \throw sfmlbe::ResourceNotFoundException if the resource is not found in any scope.
+ */
+#define _GET_MUSIC(key) ((sfmlbe::ResourceMusic *)(sfmlbe::ResourceManager::GetInstance()->FindResourceByID(key)))->GetMusic()
+
+/*!
+    \def _GET_MUSIC_SCOPE(key, scope)
+    Get the sfml::Music from a key and a specified scope.
+    \param key String used for ID to search the resource.
+    \param scope String for the defined scope.
+    \return First sfml::Music * where the id equal to key.
+    \throw sfmlbe::ResourceNotFoundException if the resource is not found in any scope.
+    \throw sfmlbe::ScopeNotFoundException if the scope is not found.
+ */
+#define _GET_MUSIC_SCOPE(key, scope) ((sfmlbe::ResourceMusic *)(sfmlbe::ResourceManager::GetInstance()->FindResourceByID(key, scope)))->GetMusic()
+
+/*!
+    \def _GET_FONT(key)
+    Get the sfml::Font from a key.
+    \param key String used for ID to search the resource.
+    \return First sfml::Font * where the id equal to key.
+    \throw sfmlbe::ResourceNotFoundException if the resource is not found in any scope.
+ */
+#define _GET_FONT(key) ((sfmlbe::ResourceFont *)(sfmlbe::ResourceManager::GetInstance()->FindResourceByID(key)))->GetFont()
+
+/*!
+    \def _GET_FONT_SCOPE(key, scope)
+    Get the sfml::Font from a key and a specified scope.
+    \param key String used for ID to search the resource.
+    \param scope String for the defined scope.
+    \return First sfml::Font * where the id equal to key.
+    \throw sfmlbe::ResourceNotFoundException if the resource is not found in any scope.
+    \throw sfmlbe::ScopeNotFoundException if the scope is not found.
+ */
+#define _GET_FONT_SCOPE(key, scope) ((sfmlbe::ResourceFont *)(sfmlbe::ResourceManager::GetInstance()->FindResourceByID(key, scope)))->GetFont()
+
+/*!
+    \def _GET_TEXT(key, key_text)
+    Get the std::String from a key.
+    \param key String used for ID to search the resource.
+    \param key_text String used for to search the text in the resource.
+    \return First std::String * where the id equal to key.
+    \throw sfmlbe::ResourceNotFoundException if the resource is not found in any scope.
+ */
+#define _GET_TEXT(key, key_text) ((sfmlbe::ResourceText *)(sfmlbe::ResourceManager::GetInstance()->FindResourceByID(key)))->GetText(key_text)
+
+/*!
+    \def _GET_TEXT_SCOPE(key, scope, key_text)
+    Get the std::String from a key and a specified scope.
+    \param key String used for ID to search the resource.
+    \param scope String for the defined scope.
+    \param key_text String used for to search the text in the resource.
+    \return First std::String * where the id equal to key.
+    \throw sfmlbe::ResourceNotFoundException if the resource is not found in any scope.
+    \throw sfmlbe::ScopeNotFoundException if the scope is not found.
+ */
+#define _GET_TEXT_SCOPE(key, scope, key_text) ((sfmlbe::ResourceText *)(sfmlbe::ResourceManager::GetInstance()->FindResourceByID(key, scope)))->GetText(key_text)
 #endif

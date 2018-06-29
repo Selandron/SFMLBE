@@ -1,0 +1,135 @@
+\hypertarget{classsfmlbe_1_1_resource_font}{}\section{sfmlbe\+:\+:Resource\+Font Class Reference}
+\label{classsfmlbe_1_1_resource_font}\index{sfmlbe\+::\+Resource\+Font@{sfmlbe\+::\+Resource\+Font}}
+
+
+{\ttfamily \#include $<$resourcefont.\+hpp$>$}
+
+Inheritance diagram for sfmlbe\+:\+:Resource\+Font\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsfmlbe_1_1_resource_font}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsfmlbe_1_1_resource_font_a1b841c5e14a228a10db8a3d8c6ef2b0b}{Resource\+Font}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsfmlbe_1_1_resource_font_ad29b31b52682209630a6a8bba1999200}{Resource\+Font}} (std\+::string ID, std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsfmlbe_1_1_resource_font_a01aa16c3fae9a4027620308008ebbce0}{$\sim$\+Resource\+Font}} ()
+\begin{DoxyCompactList}\small\item\em Descructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_resource_font_a8629842a4597fa4c22e58a85ae76bc74}{Load}} ()
+\begin{DoxyCompactList}\small\item\em Load the sf\+::\+Font targeted by this resource. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_resource_font_a44911079325cd8fcf3f2bce64c58ff86}{Unload}} ()
+\begin{DoxyCompactList}\small\item\em Unload the sf\+::\+Font targeted by this resource. \end{DoxyCompactList}\item 
+sf\+::\+Font $\ast$ \mbox{\hyperlink{classsfmlbe_1_1_resource_font_a22f252c36d8554aade52e873d3331cce}{Get\+Font}} ()
+\begin{DoxyCompactList}\small\item\em Get the sf\+::\+Font associed to this resource. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class allowing to store a sf\+::\+Font using the S\+F\+M\+L\+BE \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} Manager system. Provide an interface to load and unload font easily. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_font_a1b841c5e14a228a10db8a3d8c6ef2b0b}\label{classsfmlbe_1_1_resource_font_a1b841c5e14a228a10db8a3d8c6ef2b0b}} 
+\index{sfmlbe\+::\+Resource\+Font@{sfmlbe\+::\+Resource\+Font}!Resource\+Font@{Resource\+Font}}
+\index{Resource\+Font@{Resource\+Font}!sfmlbe\+::\+Resource\+Font@{sfmlbe\+::\+Resource\+Font}}
+\subsubsection{\texorpdfstring{Resource\+Font()}{ResourceFont()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sfmlbe\+::\+Resource\+Font\+::\+Resource\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Construct a non loaded font resource. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_font_ad29b31b52682209630a6a8bba1999200}{Resource\+Font(std\+::string I\+D, std\+::string filename)}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_font_a01aa16c3fae9a4027620308008ebbce0}{$\sim$\+Resource\+Font()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_font_ad29b31b52682209630a6a8bba1999200}\label{classsfmlbe_1_1_resource_font_ad29b31b52682209630a6a8bba1999200}} 
+\index{sfmlbe\+::\+Resource\+Font@{sfmlbe\+::\+Resource\+Font}!Resource\+Font@{Resource\+Font}}
+\index{Resource\+Font@{Resource\+Font}!sfmlbe\+::\+Resource\+Font@{sfmlbe\+::\+Resource\+Font}}
+\subsubsection{\texorpdfstring{Resource\+Font()}{ResourceFont()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sfmlbe\+::\+Resource\+Font\+::\+Resource\+Font (\begin{DoxyParamCaption}\item[{std\+::string}]{ID,  }\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Construct a non loaded font resource, but with provided parameters. 
+\begin{DoxyParams}{Parameters}
+{\em ID} & ID of the resource in the scope specified. \\
+\hline
+{\em filename} & Relative path of file from where the resource is loaded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_font_a1b841c5e14a228a10db8a3d8c6ef2b0b}{Resource\+Font()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_font_a01aa16c3fae9a4027620308008ebbce0}{$\sim$\+Resource\+Font()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_font_a01aa16c3fae9a4027620308008ebbce0}\label{classsfmlbe_1_1_resource_font_a01aa16c3fae9a4027620308008ebbce0}} 
+\index{sfmlbe\+::\+Resource\+Font@{sfmlbe\+::\+Resource\+Font}!````~Resource\+Font@{$\sim$\+Resource\+Font}}
+\index{````~Resource\+Font@{$\sim$\+Resource\+Font}!sfmlbe\+::\+Resource\+Font@{sfmlbe\+::\+Resource\+Font}}
+\subsubsection{\texorpdfstring{$\sim$\+Resource\+Font()}{~ResourceFont()}}
+{\footnotesize\ttfamily sfmlbe\+::\+Resource\+Font\+::$\sim$\+Resource\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Descructor. 
+
+Free memory used by the sf\+::\+Font and this resource. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_font_a1b841c5e14a228a10db8a3d8c6ef2b0b}{Resource\+Font()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_font_ad29b31b52682209630a6a8bba1999200}{Resource\+Font(std\+::string I\+D, std\+::string filename)}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_font_a22f252c36d8554aade52e873d3331cce}\label{classsfmlbe_1_1_resource_font_a22f252c36d8554aade52e873d3331cce}} 
+\index{sfmlbe\+::\+Resource\+Font@{sfmlbe\+::\+Resource\+Font}!Get\+Font@{Get\+Font}}
+\index{Get\+Font@{Get\+Font}!sfmlbe\+::\+Resource\+Font@{sfmlbe\+::\+Resource\+Font}}
+\subsubsection{\texorpdfstring{Get\+Font()}{GetFont()}}
+{\footnotesize\ttfamily sf\+::\+Font$\ast$ sfmlbe\+::\+Resource\+Font\+::\+Get\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the sf\+::\+Font associed to this resource. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the sf\+::\+Font or N\+U\+LL. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_font_a8629842a4597fa4c22e58a85ae76bc74}\label{classsfmlbe_1_1_resource_font_a8629842a4597fa4c22e58a85ae76bc74}} 
+\index{sfmlbe\+::\+Resource\+Font@{sfmlbe\+::\+Resource\+Font}!Load@{Load}}
+\index{Load@{Load}!sfmlbe\+::\+Resource\+Font@{sfmlbe\+::\+Resource\+Font}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Resource\+Font\+::\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Load the sf\+::\+Font targeted by this resource. 
+
+If success set this resource as loaded. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_font_a44911079325cd8fcf3f2bce64c58ff86}{Unload()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_acd0812c81f7d5d851a4671f0cf7bb4f1}{Is\+Loaded()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classsfmlbe_1_1_resource_a35981869a1e90ebbf30258ff7aa1d6d2}{sfmlbe\+::\+Resource}}.
+
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_font_a44911079325cd8fcf3f2bce64c58ff86}\label{classsfmlbe_1_1_resource_font_a44911079325cd8fcf3f2bce64c58ff86}} 
+\index{sfmlbe\+::\+Resource\+Font@{sfmlbe\+::\+Resource\+Font}!Unload@{Unload}}
+\index{Unload@{Unload}!sfmlbe\+::\+Resource\+Font@{sfmlbe\+::\+Resource\+Font}}
+\subsubsection{\texorpdfstring{Unload()}{Unload()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Resource\+Font\+::\+Unload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Unload the sf\+::\+Font targeted by this resource. 
+
+If success set this resource as unloaded. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_font_a8629842a4597fa4c22e58a85ae76bc74}{Load()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_acd0812c81f7d5d851a4671f0cf7bb4f1}{Is\+Loaded()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classsfmlbe_1_1_resource_a48c75a88679cf457965dd013f47014b9}{sfmlbe\+::\+Resource}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+dev/header/\mbox{\hyperlink{resourcefont_8hpp}{resourcefont.\+hpp}}\end{DoxyCompactItemize}

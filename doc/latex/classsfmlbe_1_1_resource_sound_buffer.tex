@@ -1,0 +1,135 @@
+\hypertarget{classsfmlbe_1_1_resource_sound_buffer}{}\section{sfmlbe\+:\+:Resource\+Sound\+Buffer Class Reference}
+\label{classsfmlbe_1_1_resource_sound_buffer}\index{sfmlbe\+::\+Resource\+Sound\+Buffer@{sfmlbe\+::\+Resource\+Sound\+Buffer}}
+
+
+{\ttfamily \#include $<$resourcesoundbuffer.\+hpp$>$}
+
+Inheritance diagram for sfmlbe\+:\+:Resource\+Sound\+Buffer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsfmlbe_1_1_resource_sound_buffer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsfmlbe_1_1_resource_sound_buffer_a88d7088f7f0e02879c0a62563851cb67}{Resource\+Sound\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsfmlbe_1_1_resource_sound_buffer_a6f01706abb7c87383e0ddffbf8650837}{Resource\+Sound\+Buffer}} (std\+::string ID, std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsfmlbe_1_1_resource_sound_buffer_a28e17a59ffd9de59eb6394ed564efc11}{$\sim$\+Resource\+Sound\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Descructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_resource_sound_buffer_a1207531bb0e5355f90cf4a7f67734555}{Load}} ()
+\begin{DoxyCompactList}\small\item\em Load the sf\+::\+Sound\+Buffer targeted by this resource. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_resource_sound_buffer_aea7707b97d4451935597671c0e162a7b}{Unload}} ()
+\begin{DoxyCompactList}\small\item\em Unload the sf\+::\+Sound\+Buffer targeted by this resource. \end{DoxyCompactList}\item 
+sf\+::\+Sound\+Buffer $\ast$ \mbox{\hyperlink{classsfmlbe_1_1_resource_sound_buffer_a56043b6124e92d99a25e7756022088cb}{Get\+Sound\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Get the sf\+::\+Sound\+Buffer associed to this resource. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class allowing to store a sf\+::\+Sound\+Buffer using the S\+F\+M\+L\+BE \mbox{\hyperlink{classsfmlbe_1_1_resource}{Resource}} Manager system. Provide an interface to load and unload soundbuffer easily. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_sound_buffer_a88d7088f7f0e02879c0a62563851cb67}\label{classsfmlbe_1_1_resource_sound_buffer_a88d7088f7f0e02879c0a62563851cb67}} 
+\index{sfmlbe\+::\+Resource\+Sound\+Buffer@{sfmlbe\+::\+Resource\+Sound\+Buffer}!Resource\+Sound\+Buffer@{Resource\+Sound\+Buffer}}
+\index{Resource\+Sound\+Buffer@{Resource\+Sound\+Buffer}!sfmlbe\+::\+Resource\+Sound\+Buffer@{sfmlbe\+::\+Resource\+Sound\+Buffer}}
+\subsubsection{\texorpdfstring{Resource\+Sound\+Buffer()}{ResourceSoundBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sfmlbe\+::\+Resource\+Sound\+Buffer\+::\+Resource\+Sound\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Construct a non loaded soundbuffer resource. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_sound_buffer_a6f01706abb7c87383e0ddffbf8650837}{Resource\+Sound\+Buffer(std\+::string I\+D, std\+::string filename)}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_sound_buffer_a28e17a59ffd9de59eb6394ed564efc11}{$\sim$\+Resource\+Sound\+Buffer()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_sound_buffer_a6f01706abb7c87383e0ddffbf8650837}\label{classsfmlbe_1_1_resource_sound_buffer_a6f01706abb7c87383e0ddffbf8650837}} 
+\index{sfmlbe\+::\+Resource\+Sound\+Buffer@{sfmlbe\+::\+Resource\+Sound\+Buffer}!Resource\+Sound\+Buffer@{Resource\+Sound\+Buffer}}
+\index{Resource\+Sound\+Buffer@{Resource\+Sound\+Buffer}!sfmlbe\+::\+Resource\+Sound\+Buffer@{sfmlbe\+::\+Resource\+Sound\+Buffer}}
+\subsubsection{\texorpdfstring{Resource\+Sound\+Buffer()}{ResourceSoundBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sfmlbe\+::\+Resource\+Sound\+Buffer\+::\+Resource\+Sound\+Buffer (\begin{DoxyParamCaption}\item[{std\+::string}]{ID,  }\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Construct a non loaded soundbuffer resource, but with provided parameters. 
+\begin{DoxyParams}{Parameters}
+{\em ID} & ID of the resource in the scope specified. \\
+\hline
+{\em filename} & Relative path of file from where the resource is loaded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_sound_buffer_a88d7088f7f0e02879c0a62563851cb67}{Resource\+Sound\+Buffer()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_sound_buffer_a28e17a59ffd9de59eb6394ed564efc11}{$\sim$\+Resource\+Sound\+Buffer()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_sound_buffer_a28e17a59ffd9de59eb6394ed564efc11}\label{classsfmlbe_1_1_resource_sound_buffer_a28e17a59ffd9de59eb6394ed564efc11}} 
+\index{sfmlbe\+::\+Resource\+Sound\+Buffer@{sfmlbe\+::\+Resource\+Sound\+Buffer}!````~Resource\+Sound\+Buffer@{$\sim$\+Resource\+Sound\+Buffer}}
+\index{````~Resource\+Sound\+Buffer@{$\sim$\+Resource\+Sound\+Buffer}!sfmlbe\+::\+Resource\+Sound\+Buffer@{sfmlbe\+::\+Resource\+Sound\+Buffer}}
+\subsubsection{\texorpdfstring{$\sim$\+Resource\+Sound\+Buffer()}{~ResourceSoundBuffer()}}
+{\footnotesize\ttfamily sfmlbe\+::\+Resource\+Sound\+Buffer\+::$\sim$\+Resource\+Sound\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Descructor. 
+
+Free memory used by the sf\+::\+Sound\+Buffer and this resource. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_sound_buffer_a88d7088f7f0e02879c0a62563851cb67}{Resource\+Sound\+Buffer()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_sound_buffer_a6f01706abb7c87383e0ddffbf8650837}{Resource\+Sound\+Buffer(std\+::string I\+D, std\+::string filename)}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_sound_buffer_a56043b6124e92d99a25e7756022088cb}\label{classsfmlbe_1_1_resource_sound_buffer_a56043b6124e92d99a25e7756022088cb}} 
+\index{sfmlbe\+::\+Resource\+Sound\+Buffer@{sfmlbe\+::\+Resource\+Sound\+Buffer}!Get\+Sound\+Buffer@{Get\+Sound\+Buffer}}
+\index{Get\+Sound\+Buffer@{Get\+Sound\+Buffer}!sfmlbe\+::\+Resource\+Sound\+Buffer@{sfmlbe\+::\+Resource\+Sound\+Buffer}}
+\subsubsection{\texorpdfstring{Get\+Sound\+Buffer()}{GetSoundBuffer()}}
+{\footnotesize\ttfamily sf\+::\+Sound\+Buffer$\ast$ sfmlbe\+::\+Resource\+Sound\+Buffer\+::\+Get\+Sound\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the sf\+::\+Sound\+Buffer associed to this resource. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the sf\+::\+Sound\+Buffer or N\+U\+LL. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_sound_buffer_a1207531bb0e5355f90cf4a7f67734555}\label{classsfmlbe_1_1_resource_sound_buffer_a1207531bb0e5355f90cf4a7f67734555}} 
+\index{sfmlbe\+::\+Resource\+Sound\+Buffer@{sfmlbe\+::\+Resource\+Sound\+Buffer}!Load@{Load}}
+\index{Load@{Load}!sfmlbe\+::\+Resource\+Sound\+Buffer@{sfmlbe\+::\+Resource\+Sound\+Buffer}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Resource\+Sound\+Buffer\+::\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Load the sf\+::\+Sound\+Buffer targeted by this resource. 
+
+If success set this resource as loaded. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_sound_buffer_aea7707b97d4451935597671c0e162a7b}{Unload()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_acd0812c81f7d5d851a4671f0cf7bb4f1}{Is\+Loaded()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classsfmlbe_1_1_resource_a35981869a1e90ebbf30258ff7aa1d6d2}{sfmlbe\+::\+Resource}}.
+
+\mbox{\Hypertarget{classsfmlbe_1_1_resource_sound_buffer_aea7707b97d4451935597671c0e162a7b}\label{classsfmlbe_1_1_resource_sound_buffer_aea7707b97d4451935597671c0e162a7b}} 
+\index{sfmlbe\+::\+Resource\+Sound\+Buffer@{sfmlbe\+::\+Resource\+Sound\+Buffer}!Unload@{Unload}}
+\index{Unload@{Unload}!sfmlbe\+::\+Resource\+Sound\+Buffer@{sfmlbe\+::\+Resource\+Sound\+Buffer}}
+\subsubsection{\texorpdfstring{Unload()}{Unload()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Resource\+Sound\+Buffer\+::\+Unload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Unload the sf\+::\+Sound\+Buffer targeted by this resource. 
+
+If success set this resource as unloaded. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_resource_sound_buffer_a1207531bb0e5355f90cf4a7f67734555}{Load()}} and \mbox{\hyperlink{classsfmlbe_1_1_resource_acd0812c81f7d5d851a4671f0cf7bb4f1}{Is\+Loaded()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classsfmlbe_1_1_resource_a48c75a88679cf457965dd013f47014b9}{sfmlbe\+::\+Resource}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+dev/header/\mbox{\hyperlink{resourcesoundbuffer_8hpp}{resourcesoundbuffer.\+hpp}}\end{DoxyCompactItemize}
