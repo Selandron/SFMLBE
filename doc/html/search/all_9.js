@@ -1,12 +1,6 @@
 var searchData=
 [
-  ['sfmlbe',['SFMLBE',['../md__r_e_a_d_m_e.html',1,'']]],
-  ['scopenotfoundexception',['ScopeNotFoundException',['../classsfmlbe_1_1_scope_not_found_exception.html',1,'sfmlbe']]],
-  ['setfilename',['SetFilename',['../classsfmlbe_1_1_resource.html#a219b033dc969ca0860bf7402da27107d',1,'sfmlbe::Resource']]],
-  ['setresourceid',['SetResourceID',['../classsfmlbe_1_1_resource.html#a5f3c845ac15aa355434fe79baca5a019',1,'sfmlbe::Resource']]],
-  ['setresourcetype',['SetResourceType',['../classsfmlbe_1_1_resource.html#a6d4c41250bf66f2fe81d4a53d867c4ed',1,'sfmlbe::Resource']]],
-  ['sfmlbe',['sfmlbe',['../namespacesfmlbe.html',1,'']]],
-  ['singleton',['Singleton',['../classsfmlbe_1_1_singleton.html',1,'sfmlbe::Singleton&lt; T &gt;'],['../classsfmlbe_1_1_singleton.html#a3f47ec090e5341446601408f9d38b467',1,'sfmlbe::Singleton::Singleton()']]],
-  ['singleton_2ehpp',['singleton.hpp',['../singleton_8hpp.html',1,'']]],
-  ['singleton_3c_20resourcemanager_20_3e',['Singleton&lt; ResourceManager &gt;',['../classsfmlbe_1_1_singleton.html',1,'sfmlbe']]]
+  ['lang',['LANG',['../namespacesfmlbe.html#add7861f7feda29864e1760490cd2eb15',1,'sfmlbe']]],
+  ['load',['Load',['../classsfmlbe_1_1_resource.html#a35981869a1e90ebbf30258ff7aa1d6d2',1,'sfmlbe::Resource::Load()'],['../classsfmlbe_1_1_resource_font.html#a8629842a4597fa4c22e58a85ae76bc74',1,'sfmlbe::ResourceFont::Load()'],['../classsfmlbe_1_1_resource_music.html#a8d612eff1f1f8847c2b96a616456e558',1,'sfmlbe::ResourceMusic::Load()'],['../classsfmlbe_1_1_resource_sound_buffer.html#a1207531bb0e5355f90cf4a7f67734555',1,'sfmlbe::ResourceSoundBuffer::Load()'],['../classsfmlbe_1_1_resource_text.html#a1176965f3e9d26c618688f7899b4b58b',1,'sfmlbe::ResourceText::Load()'],['../classsfmlbe_1_1_resource_texture.html#a4f8d27c8e50efce6d66a30edb078e2d3',1,'sfmlbe::ResourceTexture::Load()']]],
+  ['loadfromfilexml',['LoadFromFileXML',['../classsfmlbe_1_1_resource_manager.html#a8f99da24868d355227f641dc50db2bd2',1,'sfmlbe::ResourceManager::LoadFromFileXML(const std::string &amp;filename)'],['../classsfmlbe_1_1_resource_manager.html#a2da403b4057837350f5e09f0a33b80dd',1,'sfmlbe::ResourceManager::LoadFromFileXML(const std::string &amp;filename, const std::string &amp;scopename)'],['../classsfmlbe_1_1_resource_manager.html#a99707b50bdf61ac1daadd65027a1ae2b',1,'sfmlbe::ResourceManager::LoadFromFileXML(const std::string &amp;filename, const std::string &amp;scopename, const std::string &amp;scope_target)']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resource_5ftype',['RESOURCE_TYPE',['../namespacesfmlbe.html#ac4335ed3060bba025f73e01f9dccb2dd',1,'sfmlbe']]]
+  ['lang',['LANG',['../namespacesfmlbe.html#add7861f7feda29864e1760490cd2eb15',1,'sfmlbe']]]
 ];

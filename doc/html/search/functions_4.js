@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kill',['Kill',['../classsfmlbe_1_1_singleton.html#a0fa947a0f0940b94f757e49b56f37555',1,'sfmlbe::Singleton']]]
+  ['handleevents',['HandleEvents',['../classsfmlbe_1_1_game_manager.html#a0fd18d663571814d08d14e6c1ed3191a',1,'sfmlbe::GameManager::HandleEvents()'],['../classsfmlbe_1_1_game_state.html#a44242b884396f04b6832436eb4325f05',1,'sfmlbe::GameState::HandleEvents()']]]
 ];

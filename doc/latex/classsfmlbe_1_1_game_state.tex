@@ -1,0 +1,177 @@
+\hypertarget{classsfmlbe_1_1_game_state}{}\section{sfmlbe\+:\+:Game\+State Class Reference}
+\label{classsfmlbe_1_1_game_state}\index{sfmlbe\+::\+Game\+State@{sfmlbe\+::\+Game\+State}}
+
+
+{\ttfamily \#include $<$gamestate.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classsfmlbe_1_1_game_state_acd3f110b2da9986bfe3c5981422457dc}{Init}} (\mbox{\hyperlink{classsfmlbe_1_1_game_manager}{Game\+Manager}} $\ast$game)=0
+\begin{DoxyCompactList}\small\item\em Virtual member. Init the state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsfmlbe_1_1_game_state_ab8f53722c3d8c87d9ca3826b89f1da9b}{Cleanup}} ()=0
+\begin{DoxyCompactList}\small\item\em Virtual member. Cleanup the memory in the state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsfmlbe_1_1_game_state_a5a91935e9a6e04754373fb36d08e8358}{Pause}} ()=0
+\begin{DoxyCompactList}\small\item\em Virtual member. Pause the state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsfmlbe_1_1_game_state_ac45b1eba2aef82a0b15ab147da668b34}{Resume}} ()=0
+\begin{DoxyCompactList}\small\item\em Virtual member. Resume the state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsfmlbe_1_1_game_state_a44242b884396f04b6832436eb4325f05}{Handle\+Events}} (\mbox{\hyperlink{classsfmlbe_1_1_game_manager}{Game\+Manager}} $\ast$game)=0
+\begin{DoxyCompactList}\small\item\em Virtual member. Handle the poll event loop. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsfmlbe_1_1_game_state_ad3a1e8eb5d0598af841e0095033fa470}{Update}} (\mbox{\hyperlink{classsfmlbe_1_1_game_manager}{Game\+Manager}} $\ast$game)=0
+\begin{DoxyCompactList}\small\item\em Virtual member. Update what to display. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsfmlbe_1_1_game_state_aa0b979c5694e117334eff4d3c1d25908}{Draw}} (\mbox{\hyperlink{classsfmlbe_1_1_game_manager}{Game\+Manager}} $\ast$game)=0
+\begin{DoxyCompactList}\small\item\em Virtual member. Draw what to draw. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_game_state_abb4f5e979d3c3fa56de67b302c3ac4b7}{Change\+State}} (\mbox{\hyperlink{classsfmlbe_1_1_game_manager}{Game\+Manager}} $\ast$game, \mbox{\hyperlink{classsfmlbe_1_1_game_state}{Game\+State}} $\ast$state)
+\begin{DoxyCompactList}\small\item\em Change the actual state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsfmlbe_1_1_game_state_aef1ebb189af7c23e0e6297ac0c8d72d1}{Game\+State}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Virtual class representing a \mbox{\hyperlink{classsfmlbe_1_1_game_state}{Game\+State}}. Need to be inherit to be used with the \mbox{\hyperlink{classsfmlbe_1_1_game_manager}{Game\+Manager}}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_state_aef1ebb189af7c23e0e6297ac0c8d72d1}\label{classsfmlbe_1_1_game_state_aef1ebb189af7c23e0e6297ac0c8d72d1}} 
+\index{sfmlbe\+::\+Game\+State@{sfmlbe\+::\+Game\+State}!Game\+State@{Game\+State}}
+\index{Game\+State@{Game\+State}!sfmlbe\+::\+Game\+State@{sfmlbe\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{Game\+State()}{GameState()}}
+{\footnotesize\ttfamily sfmlbe\+::\+Game\+State\+::\+Game\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Constructor. 
+
+Construct \mbox{\hyperlink{classsfmlbe_1_1_game_state}{Game\+State}}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_state_abb4f5e979d3c3fa56de67b302c3ac4b7}\label{classsfmlbe_1_1_game_state_abb4f5e979d3c3fa56de67b302c3ac4b7}} 
+\index{sfmlbe\+::\+Game\+State@{sfmlbe\+::\+Game\+State}!Change\+State@{Change\+State}}
+\index{Change\+State@{Change\+State}!sfmlbe\+::\+Game\+State@{sfmlbe\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{Change\+State()}{ChangeState()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Game\+State\+::\+Change\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsfmlbe_1_1_game_manager}{Game\+Manager}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{classsfmlbe_1_1_game_state}{Game\+State}} $\ast$}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Change the actual state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \mbox{\hyperlink{classsfmlbe_1_1_game_manager}{Game\+Manager}} that will call the state. \\
+\hline
+{\em state} & \mbox{\hyperlink{classsfmlbe_1_1_game_state}{Game\+State}} that will be called. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_state_ab8f53722c3d8c87d9ca3826b89f1da9b}\label{classsfmlbe_1_1_game_state_ab8f53722c3d8c87d9ca3826b89f1da9b}} 
+\index{sfmlbe\+::\+Game\+State@{sfmlbe\+::\+Game\+State}!Cleanup@{Cleanup}}
+\index{Cleanup@{Cleanup}!sfmlbe\+::\+Game\+State@{sfmlbe\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{Cleanup()}{Cleanup()}}
+{\footnotesize\ttfamily virtual void sfmlbe\+::\+Game\+State\+::\+Cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Virtual member. Cleanup the memory in the state. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_game_state_ab8f53722c3d8c87d9ca3826b89f1da9b}{Cleanup()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_state_aa0b979c5694e117334eff4d3c1d25908}\label{classsfmlbe_1_1_game_state_aa0b979c5694e117334eff4d3c1d25908}} 
+\index{sfmlbe\+::\+Game\+State@{sfmlbe\+::\+Game\+State}!Draw@{Draw}}
+\index{Draw@{Draw}!sfmlbe\+::\+Game\+State@{sfmlbe\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily virtual void sfmlbe\+::\+Game\+State\+::\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsfmlbe_1_1_game_manager}{Game\+Manager}} $\ast$}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Virtual member. Draw what to draw. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \mbox{\hyperlink{classsfmlbe_1_1_game_manager}{Game\+Manager}} that can be used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_game_state_a44242b884396f04b6832436eb4325f05}{Handle\+Events(\+Game\+Manager $\ast$ game)}} and \mbox{\hyperlink{classsfmlbe_1_1_game_state_ad3a1e8eb5d0598af841e0095033fa470}{Update(\+Game\+Manager $\ast$ game)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_state_a44242b884396f04b6832436eb4325f05}\label{classsfmlbe_1_1_game_state_a44242b884396f04b6832436eb4325f05}} 
+\index{sfmlbe\+::\+Game\+State@{sfmlbe\+::\+Game\+State}!Handle\+Events@{Handle\+Events}}
+\index{Handle\+Events@{Handle\+Events}!sfmlbe\+::\+Game\+State@{sfmlbe\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{Handle\+Events()}{HandleEvents()}}
+{\footnotesize\ttfamily virtual void sfmlbe\+::\+Game\+State\+::\+Handle\+Events (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsfmlbe_1_1_game_manager}{Game\+Manager}} $\ast$}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Virtual member. Handle the poll event loop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \mbox{\hyperlink{classsfmlbe_1_1_game_manager}{Game\+Manager}} that can be used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_game_state_ad3a1e8eb5d0598af841e0095033fa470}{Update(\+Game\+Manager $\ast$ game)}} and \mbox{\hyperlink{classsfmlbe_1_1_game_state_aa0b979c5694e117334eff4d3c1d25908}{Draw(\+Game\+Manager $\ast$ game)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_state_acd3f110b2da9986bfe3c5981422457dc}\label{classsfmlbe_1_1_game_state_acd3f110b2da9986bfe3c5981422457dc}} 
+\index{sfmlbe\+::\+Game\+State@{sfmlbe\+::\+Game\+State}!Init@{Init}}
+\index{Init@{Init}!sfmlbe\+::\+Game\+State@{sfmlbe\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily virtual void sfmlbe\+::\+Game\+State\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsfmlbe_1_1_game_manager}{Game\+Manager}} $\ast$}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Virtual member. Init the state. 
+
+\begin{DoxySeeAlso}{See also}
+Unload() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_state_a5a91935e9a6e04754373fb36d08e8358}\label{classsfmlbe_1_1_game_state_a5a91935e9a6e04754373fb36d08e8358}} 
+\index{sfmlbe\+::\+Game\+State@{sfmlbe\+::\+Game\+State}!Pause@{Pause}}
+\index{Pause@{Pause}!sfmlbe\+::\+Game\+State@{sfmlbe\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{Pause()}{Pause()}}
+{\footnotesize\ttfamily virtual void sfmlbe\+::\+Game\+State\+::\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Virtual member. Pause the state. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_game_state_ac45b1eba2aef82a0b15ab147da668b34}{Resume()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_state_ac45b1eba2aef82a0b15ab147da668b34}\label{classsfmlbe_1_1_game_state_ac45b1eba2aef82a0b15ab147da668b34}} 
+\index{sfmlbe\+::\+Game\+State@{sfmlbe\+::\+Game\+State}!Resume@{Resume}}
+\index{Resume@{Resume}!sfmlbe\+::\+Game\+State@{sfmlbe\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{Resume()}{Resume()}}
+{\footnotesize\ttfamily virtual void sfmlbe\+::\+Game\+State\+::\+Resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Virtual member. Resume the state. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_game_state_a5a91935e9a6e04754373fb36d08e8358}{Pause()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_state_ad3a1e8eb5d0598af841e0095033fa470}\label{classsfmlbe_1_1_game_state_ad3a1e8eb5d0598af841e0095033fa470}} 
+\index{sfmlbe\+::\+Game\+State@{sfmlbe\+::\+Game\+State}!Update@{Update}}
+\index{Update@{Update}!sfmlbe\+::\+Game\+State@{sfmlbe\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void sfmlbe\+::\+Game\+State\+::\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsfmlbe_1_1_game_manager}{Game\+Manager}} $\ast$}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Virtual member. Update what to display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \mbox{\hyperlink{classsfmlbe_1_1_game_manager}{Game\+Manager}} that can be used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_game_state_a44242b884396f04b6832436eb4325f05}{Handle\+Events(\+Game\+Manager $\ast$ game)}} and \mbox{\hyperlink{classsfmlbe_1_1_game_state_aa0b979c5694e117334eff4d3c1d25908}{Draw(\+Game\+Manager $\ast$ game)}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+dev/header/\mbox{\hyperlink{gamestate_8hpp}{gamestate.\+hpp}}\end{DoxyCompactItemize}

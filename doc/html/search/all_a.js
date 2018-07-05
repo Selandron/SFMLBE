@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['unload',['Unload',['../classsfmlbe_1_1_resource.html#a48c75a88679cf457965dd013f47014b9',1,'sfmlbe::Resource::Unload()'],['../classsfmlbe_1_1_resource_font.html#a44911079325cd8fcf3f2bce64c58ff86',1,'sfmlbe::ResourceFont::Unload()'],['../classsfmlbe_1_1_resource_music.html#a5697430030c12a5850f317147feb059f',1,'sfmlbe::ResourceMusic::Unload()'],['../classsfmlbe_1_1_resource_sound_buffer.html#aea7707b97d4451935597671c0e162a7b',1,'sfmlbe::ResourceSoundBuffer::Unload()'],['../classsfmlbe_1_1_resource_text.html#a7493d044dfcd376b0fd17fd5fbd52ada',1,'sfmlbe::ResourceText::Unload()'],['../classsfmlbe_1_1_resource_texture.html#ac8b1b5866242e222abf0385144711646',1,'sfmlbe::ResourceTexture::Unload()']]]
+  ['pause',['Pause',['../classsfmlbe_1_1_game_state.html#a5a91935e9a6e04754373fb36d08e8358',1,'sfmlbe::GameState']]],
+  ['popstate',['PopState',['../classsfmlbe_1_1_game_manager.html#a2c80186d2de5b168900bb91b05eb11ee',1,'sfmlbe::GameManager']]],
+  ['printmanager',['PrintManager',['../classsfmlbe_1_1_resource_manager.html#a74e64d1b098dcdbc0ee4fd8925303523',1,'sfmlbe::ResourceManager']]],
+  ['pushstate',['PushState',['../classsfmlbe_1_1_game_manager.html#a63e4a2e13a8ce27e1c394fa942212dc1',1,'sfmlbe::GameManager']]]
 ];

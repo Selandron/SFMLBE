@@ -1,0 +1,250 @@
+\hypertarget{classsfmlbe_1_1_game_manager}{}\section{sfmlbe\+:\+:Game\+Manager Class Reference}
+\label{classsfmlbe_1_1_game_manager}\index{sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}}
+
+
+{\ttfamily \#include $<$gamemanager.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_game_manager_a120f841a7f3cb2dfe21b78984c3e83bf}{Init}} (std\+::string \&title)
+\begin{DoxyCompactList}\small\item\em Init the Game Manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_game_manager_a718bd72362c1ba9504ca0852b2073f1b}{Cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Clean the Game Manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_game_manager_a7bb485f2b11da154da6b3a2d1fa0860f}{Change\+State}} (\mbox{\hyperlink{classsfmlbe_1_1_game_state}{Game\+State}} $\ast$state)
+\begin{DoxyCompactList}\small\item\em Change the current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_game_manager_a63e4a2e13a8ce27e1c394fa942212dc1}{Push\+State}} (\mbox{\hyperlink{classsfmlbe_1_1_game_state}{Game\+State}} $\ast$state)
+\begin{DoxyCompactList}\small\item\em Push the current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_game_manager_a2c80186d2de5b168900bb91b05eb11ee}{Pop\+State}} ()
+\begin{DoxyCompactList}\small\item\em Pop the current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_game_manager_a0fd18d663571814d08d14e6c1ed3191a}{Handle\+Events}} ()
+\begin{DoxyCompactList}\small\item\em Call the Hande\+Events function on the current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_game_manager_a895a0457b48b9ccd36194a345b04b547}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Call the Update function on the current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_game_manager_a6c8377c22718038d018ebe7e26d3bdc3}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em Call the Draw function on the current state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsfmlbe_1_1_game_manager_abf3416b7fcada3b78823e3e1709922d0}{Running}} ()
+\begin{DoxyCompactList}\small\item\em Know if the window is running. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_game_manager_a17d8f897440b021f4eb1884cb3a5d521}{Quit}} ()
+\begin{DoxyCompactList}\small\item\em Stop the infinite loop. \end{DoxyCompactList}\item 
+sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{classsfmlbe_1_1_game_manager_af1a92deae211f03579cd4d262c43ca17}{Get\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Get the reference on the sf\+::\+Render\+Window. \end{DoxyCompactList}\item 
+sf\+::\+Vector2u \mbox{\hyperlink{classsfmlbe_1_1_game_manager_aded3ad1e2a432e457f523f70b71d913a}{Get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Get the size of the window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsfmlbe_1_1_game_parameters}{Game\+Parameters}} \mbox{\hyperlink{classsfmlbe_1_1_game_manager_a53239ca0e97052fc512ab973102ca6cb}{Get\+Parameters}} ()
+\begin{DoxyCompactList}\small\item\em Get the caracteristics of the window and the system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfmlbe_1_1_game_manager_aaea9fd274be0e81c1e493e9a89edc7eb}{Set\+Parameters}} (\mbox{\hyperlink{structsfmlbe_1_1_game_parameters}{Game\+Parameters}} parameters)
+\begin{DoxyCompactList}\small\item\em Set the parameters of the window and system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that can handle a game state system. Replace the \char`\"{}clear draw display\char`\"{} loop by another loop using a state. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_manager_a7bb485f2b11da154da6b3a2d1fa0860f}\label{classsfmlbe_1_1_game_manager_a7bb485f2b11da154da6b3a2d1fa0860f}} 
+\index{sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}!Change\+State@{Change\+State}}
+\index{Change\+State@{Change\+State}!sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Change\+State()}{ChangeState()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Game\+Manager\+::\+Change\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsfmlbe_1_1_game_state}{Game\+State}} $\ast$}]{state }\end{DoxyParamCaption})}
+
+
+
+Change the current state. 
+
+Deletes the last state and replaces it. 
+\begin{DoxyParams}{Parameters}
+{\em state} & Reference on the state that will be used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_game_manager_a63e4a2e13a8ce27e1c394fa942212dc1}{Push\+State(\+Game\+State $\ast$ state)}} and \mbox{\hyperlink{classsfmlbe_1_1_game_manager_a2c80186d2de5b168900bb91b05eb11ee}{Pop\+State()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_manager_a718bd72362c1ba9504ca0852b2073f1b}\label{classsfmlbe_1_1_game_manager_a718bd72362c1ba9504ca0852b2073f1b}} 
+\index{sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}!Cleanup@{Cleanup}}
+\index{Cleanup@{Cleanup}!sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Cleanup()}{Cleanup()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Game\+Manager\+::\+Cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clean the Game Manager. 
+
+Pop all states and delete the sf\+::\+Render\+Window. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_game_manager_a120f841a7f3cb2dfe21b78984c3e83bf}{Init()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_manager_a6c8377c22718038d018ebe7e26d3bdc3}\label{classsfmlbe_1_1_game_manager_a6c8377c22718038d018ebe7e26d3bdc3}} 
+\index{sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}!Draw@{Draw}}
+\index{Draw@{Draw}!sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Game\+Manager\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Call the Draw function on the current state. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_game_manager_a0fd18d663571814d08d14e6c1ed3191a}{Handle\+Events()}} and \mbox{\hyperlink{classsfmlbe_1_1_game_manager_a895a0457b48b9ccd36194a345b04b547}{Update()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_manager_a53239ca0e97052fc512ab973102ca6cb}\label{classsfmlbe_1_1_game_manager_a53239ca0e97052fc512ab973102ca6cb}} 
+\index{sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}!Get\+Parameters@{Get\+Parameters}}
+\index{Get\+Parameters@{Get\+Parameters}!sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Parameters()}{GetParameters()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsfmlbe_1_1_game_parameters}{Game\+Parameters}} sfmlbe\+::\+Game\+Manager\+::\+Get\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the caracteristics of the window and the system. 
+
+\begin{DoxyReturn}{Returns}
+Parameters of the game. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_manager_aded3ad1e2a432e457f523f70b71d913a}\label{classsfmlbe_1_1_game_manager_aded3ad1e2a432e457f523f70b71d913a}} 
+\index{sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}!Get\+Size@{Get\+Size}}
+\index{Get\+Size@{Get\+Size}!sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Size()}{GetSize()}}
+{\footnotesize\ttfamily sf\+::\+Vector2u sfmlbe\+::\+Game\+Manager\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the size of the window. 
+
+\begin{DoxyReturn}{Returns}
+Size of the window (x, y). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_manager_af1a92deae211f03579cd4d262c43ca17}\label{classsfmlbe_1_1_game_manager_af1a92deae211f03579cd4d262c43ca17}} 
+\index{sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}!Get\+Window@{Get\+Window}}
+\index{Get\+Window@{Get\+Window}!sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Window()}{GetWindow()}}
+{\footnotesize\ttfamily sf\+::\+Render\+Window$\ast$ sfmlbe\+::\+Game\+Manager\+::\+Get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the reference on the sf\+::\+Render\+Window. 
+
+\begin{DoxyReturn}{Returns}
+Reference on the sf\+::\+Render\+Window. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_manager_a0fd18d663571814d08d14e6c1ed3191a}\label{classsfmlbe_1_1_game_manager_a0fd18d663571814d08d14e6c1ed3191a}} 
+\index{sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}!Handle\+Events@{Handle\+Events}}
+\index{Handle\+Events@{Handle\+Events}!sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Handle\+Events()}{HandleEvents()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Game\+Manager\+::\+Handle\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Call the Hande\+Events function on the current state. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_game_manager_a895a0457b48b9ccd36194a345b04b547}{Update()}} and \mbox{\hyperlink{classsfmlbe_1_1_game_manager_a6c8377c22718038d018ebe7e26d3bdc3}{Draw()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_manager_a120f841a7f3cb2dfe21b78984c3e83bf}\label{classsfmlbe_1_1_game_manager_a120f841a7f3cb2dfe21b78984c3e83bf}} 
+\index{sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}!Init@{Init}}
+\index{Init@{Init}!sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Game\+Manager\+::\+Init (\begin{DoxyParamCaption}\item[{std\+::string \&}]{title }\end{DoxyParamCaption})}
+
+
+
+Init the Game Manager. 
+
+Init the sf\+::\+Render\+Window. Try to use a file next to the exe \textquotesingle{}config.\+ini\textquotesingle{}. If the config file doesn\textquotesingle{}t exist the program create it, but if it\textquotesingle{}s corrupt the programm will not launch. 
+\begin{DoxyParams}{Parameters}
+{\em title} & Title of the window. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_game_manager_a718bd72362c1ba9504ca0852b2073f1b}{Cleanup()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_manager_a2c80186d2de5b168900bb91b05eb11ee}\label{classsfmlbe_1_1_game_manager_a2c80186d2de5b168900bb91b05eb11ee}} 
+\index{sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}!Pop\+State@{Pop\+State}}
+\index{Pop\+State@{Pop\+State}!sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Pop\+State()}{PopState()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Game\+Manager\+::\+Pop\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pop the current state. 
+
+Delete the current state from the stack and resume the last one. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_game_manager_a7bb485f2b11da154da6b3a2d1fa0860f}{Change\+State(\+Game\+State $\ast$ state)}} and \mbox{\hyperlink{classsfmlbe_1_1_game_manager_a63e4a2e13a8ce27e1c394fa942212dc1}{Push\+State(\+Game\+State $\ast$ state)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_manager_a63e4a2e13a8ce27e1c394fa942212dc1}\label{classsfmlbe_1_1_game_manager_a63e4a2e13a8ce27e1c394fa942212dc1}} 
+\index{sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}!Push\+State@{Push\+State}}
+\index{Push\+State@{Push\+State}!sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Push\+State()}{PushState()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Game\+Manager\+::\+Push\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsfmlbe_1_1_game_state}{Game\+State}} $\ast$}]{state }\end{DoxyParamCaption})}
+
+
+
+Push the current state. 
+
+Pauses the current state, pushes the state as parameter on top of the stack and sets as active. 
+\begin{DoxyParams}{Parameters}
+{\em state} & Reference on the state that will be used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_game_manager_a7bb485f2b11da154da6b3a2d1fa0860f}{Change\+State(\+Game\+State $\ast$ state)}} and \mbox{\hyperlink{classsfmlbe_1_1_game_manager_a2c80186d2de5b168900bb91b05eb11ee}{Pop\+State()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_manager_a17d8f897440b021f4eb1884cb3a5d521}\label{classsfmlbe_1_1_game_manager_a17d8f897440b021f4eb1884cb3a5d521}} 
+\index{sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}!Quit@{Quit}}
+\index{Quit@{Quit}!sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Quit()}{Quit()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Game\+Manager\+::\+Quit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stop the infinite loop. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_game_manager_abf3416b7fcada3b78823e3e1709922d0}{Running()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_manager_abf3416b7fcada3b78823e3e1709922d0}\label{classsfmlbe_1_1_game_manager_abf3416b7fcada3b78823e3e1709922d0}} 
+\index{sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}!Running@{Running}}
+\index{Running@{Running}!sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Running()}{Running()}}
+{\footnotesize\ttfamily bool sfmlbe\+::\+Game\+Manager\+::\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Know if the window is running. 
+
+\begin{DoxyReturn}{Returns}
+True if the window is running. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_game_manager_a17d8f897440b021f4eb1884cb3a5d521}{Quit()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_manager_aaea9fd274be0e81c1e493e9a89edc7eb}\label{classsfmlbe_1_1_game_manager_aaea9fd274be0e81c1e493e9a89edc7eb}} 
+\index{sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}!Set\+Parameters@{Set\+Parameters}}
+\index{Set\+Parameters@{Set\+Parameters}!sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Set\+Parameters()}{SetParameters()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Game\+Manager\+::\+Set\+Parameters (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsfmlbe_1_1_game_parameters}{Game\+Parameters}}}]{parameters }\end{DoxyParamCaption})}
+
+
+
+Set the parameters of the window and system. 
+
+This function will only recreate the window and change the .ini, but not reload the lang if changed. 
+\begin{DoxyParams}{Parameters}
+{\em parameters} & Parameters of the game. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsfmlbe_1_1_game_manager_a895a0457b48b9ccd36194a345b04b547}\label{classsfmlbe_1_1_game_manager_a895a0457b48b9ccd36194a345b04b547}} 
+\index{sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}!Update@{Update}}
+\index{Update@{Update}!sfmlbe\+::\+Game\+Manager@{sfmlbe\+::\+Game\+Manager}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void sfmlbe\+::\+Game\+Manager\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Call the Update function on the current state. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsfmlbe_1_1_game_manager_a0fd18d663571814d08d14e6c1ed3191a}{Handle\+Events()}} and \mbox{\hyperlink{classsfmlbe_1_1_game_manager_a6c8377c22718038d018ebe7e26d3bdc3}{Draw()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+dev/header/\mbox{\hyperlink{gamemanager_8hpp}{gamemanager.\+hpp}}\end{DoxyCompactItemize}
