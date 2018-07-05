@@ -16,22 +16,30 @@
 	This example show how to create and use some states.
 	In this case, when you press Space you push the second state on top of the first one, or to pop the second one to resume the first one.
 	When you press Enter you change the state, you don't push it.
-	Because each state have only one instance, you cannot
+	Because each state have only one instance, even if you can stack the same pointer, if you cleanup one you cleanup all.
+	Be careful to prepare you final states machine (to avoid errors or strange behavior like this example).
+
+	IN A GOOD STATES SYSTEM, A STATE CAN ONLY BE ONCE IN THE STACK, AND YOU CANNOT POP THE LAST ONE
+	Here this errors are not handled because there can be some cases where it is useful, but avoid them if you can. 
 
 	Map :		Initial
 		   	  =>[STATE 1]   --- Enter ---   =>[STATE 2]   --- Enter ---   =>[STATE 1]
-				   |							 |
-				   |							 |
-				 Space						   Space
-				   |							 |
-				   |							 |
-			  =>[STATE 2]   --- Enter ---   =>[STATE 1]   --- Enter ----  =>[STATE 2]						
-			    [STATE 1]		
+				   |							 |							   |
+				   |							 |							   |
+				 Space						   Space						 Space
+				   |							 |							   |
+				   |							 |							   |
+				   |						   ERROR						   |
+				   |														   |
+			  =>[STATE 2]   --- Enter ---   =>[STATE 1]	  --- Enter ---   =>[STATE 2]
+			    [STATE 1]					  [STATE 1]						[STATE 1]
 
+	How to compile :
+	Go in the example folder and use :
+	g++ .\states\examplestate.cpp ..\release\sfmlbe.cpp ..\release\tinyxml2.cpp -W -Wall -ansi -std=c++11 -I"SFMLPATH"\include -L"SFMLPATH"\lib -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio -lsfml-network -o exe1
+	Don't forget to add .dll on Windows !
 
  */
-
-//g++ .\states\examplestate.cpp ..\release\sfmlbe.cpp ..\release\tinyxml2.cpp -W -Wall -ansi -std=c++11 -IE:\DataEtienne\Biblio\SFML-2.5.0\include -LE:\DataEtienne\Biblio\SFML-2.5.0\lib -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio -lsfml-network -o exe1
 
 /* DEFINITION OF DIFFERENT STATES STATES */
 
