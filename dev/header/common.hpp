@@ -25,7 +25,18 @@ enum RESOURCE_TYPE
     RESOURCE_MUSIC = 3, /*!< Represent a music resource. */
     RESOURCE_TEXT = 4, /*!< Represent a string resource. */
     RESOURCE_FONT = 5, /*!< Represent a font resource. */
-}
+};
+
+/*! \enum LANG
+    Enum defining every type of lang.
+*/
+enum LANG
+{
+    EN, /*!< English. */
+    FR, /*!< French. */
+    DE, /*!< Deutch. */
+    SP, /*!< Spanish. */
+};
 
 }
 
@@ -131,4 +142,6 @@ enum RESOURCE_TYPE
     \throw sfmlbe::ScopeNotFoundException if the scope is not found.
  */
 #define _GET_TEXT_SCOPE(key, scope, key_text) ((sfmlbe::ResourceText *)(sfmlbe::ResourceManager::GetInstance()->FindResourceByID(key, scope)))->GetText(key_text)
+
+
 #endif

@@ -7,8 +7,8 @@
 #include <exception>
 #include <map>
 #include <fstream>
-#include <sstream>
 #include <iomanip>
+#include <vector>
 #include "tinyxml2.hpp"
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
@@ -30,6 +30,17 @@ enum RESOURCE_TYPE
     RESOURCE_MUSIC = 3, /*!< Represent a music resource. */
     RESOURCE_TEXT = 4, /*!< Represent a string resource. */
     RESOURCE_FONT = 5, /*!< Represent a font resource. */
+};
+
+/*! \enum LANG
+    Enum defining every type of lang.
+*/
+enum LANG
+{
+    EN, /*!< English. */
+    FR, /*!< French. */
+    DE, /*!< Deutch. */
+    SP, /*!< Spanish. */
 };
 
 
@@ -766,6 +777,204 @@ class ResourceManager : public sfmlbe::Singleton<ResourceManager>
         std::vector<Resource *> m_listOfPendingResources;                           //Resources creates but not stored
         UINT m_resourceCount;                                                       //Total number of resources loaded
         std::map<std::string, std::map<std::string, Resource *> * > m_resources;    //Map of form <scope ID, Resource map>
+};
+
+class GameState;
+
+/*!
+    \struct GameParameters
+    Represent a list of all the caracteristics of the game (and the window).
+ */
+struct GameParameters
+{
+    sf::VideoMode windowCaracts;
+    bool fullscreen;
+    int antialiasingLevel;
+    int maxFramerate;
+    bool verticalSync;
+    LANG lang;
+};
+
+
+/*!
+    Class that can handle a game state system.
+    Replace the "clear draw display" loop by another loop using a state.
+ */
+class GameManager
+{
+    public:
+
+        //! Init the Game Manager.
+        /*!
+            Init the sf::RenderWindow. Try to use a file next to the exe 'config.ini'.
+            If the config file doesn't exist the program create it, but if it's corrupt the programm will not launch.
+            \param title Title of the window.
+            \sa Cleanup()
+        */
+        void Init(std::string & title);
+
+        //! Clean the Game Manager.
+        /*!
+            Pop all states and delete the sf::RenderWindow.
+            \sa Init()
+        */
+        void Cleanup();
+
+        //! Change the current state.
+        /*!
+            Deletes the last state and replaces it.
+            \param state Reference on the state that will be used.
+            \sa PushState(GameState * state) and PopState()
+        */
+        void ChangeState(GameState * state);
+
+        //! Push the current state.
+        /*!
+            Pauses the current state, pushes the state as parameter on top of the stack and sets as active.
+            \param state Reference on the state that will be used.
+            \sa ChangeState(GameState * state) and PopState()
+        */
+        void PushState(GameState * state);
+
+        //! Pop the current state.
+        /*!
+            Delete the current state from the stack and resume the last one.
+            \sa ChangeState(GameState * state) and PushState(GameState * state)
+        */
+        void PopState();
+
+        //! Call the HandeEvents function on the current state.
+        /*!
+            \sa Update() and Draw()
+        */
+        void HandleEvents();
+
+        //! Call the Update function on the current state.
+        /*!
+            \sa HandleEvents() and Draw()
+        */
+        void Update();
+
+        //! Call the Draw function on the current state.
+        /*!
+            \sa HandleEvents() and Update()
+        */
+        void Draw();
+
+        //! Know if the window is running.
+        /*!
+            \return True if the window is running.
+            \sa Quit()
+        */
+        bool Running() { return m_running; }
+
+        //! Stop the infinite loop.
+        /*! 
+            \sa Running()
+        */
+        void Quit();
+
+        //! Get the reference on the sf::RenderWindow
+        /*!
+            \return Reference on the sf::RenderWindow.
+        */
+        sf::RenderWindow * GetWindow() { return m_window; }
+
+        //! Get the size of the window.
+        /*!
+            \return Size of the window (x, y).
+        */
+        sf::Vector2u GetSize();
+
+        //! Get the caracteristics of the window and the system.
+        /*!
+            \return Parameters of the game.
+        */
+        GameParameters GetParameters() { return m_parameters; }
+
+        //! Set the parameters of the window and system.
+        /*!
+            This function will only recreate the window and change the .ini, but not reload the lang if changed.
+            \param parameters Parameters of the game.
+        */
+        void SetParameters(GameParameters parameters);
+
+    private:
+        bool checkIni();
+
+        std::vector<GameState *> m_states;
+        sf::RenderWindow * m_window;
+        bool m_running;
+
+        std::string m_title;
+
+        GameParameters m_parameters;
+};
+
+/*!
+    Virtual class representing a GameState. Need to be inherit to be used with the GameManager.
+*/
+class GameState
+{
+    public:
+        //! Virtual member. Init the state.
+        /*!
+            \sa Unload()
+        */
+        virtual void Init(GameManager * game) = 0;
+
+        //! Virtual member. Cleanup the memory in the state.
+        /*!
+            \sa Cleanup()
+        */
+        virtual void Cleanup() = 0;
+
+        //! Virtual member. Pause the state.
+        /*!
+            \sa Resume()
+        */
+        virtual void Pause() = 0;
+
+        //! Virtual member. Resume the state.
+        /*!
+            \sa Pause()
+        */
+        virtual void Resume() = 0;
+
+        //! Virtual member. Handle the poll event loop.
+        /*!
+            \param game GameManager that can be used.
+            \sa Update(GameManager * game) and Draw(GameManager * game)
+        */
+        virtual void HandleEvents(GameManager * game) = 0;
+
+        //! Virtual member. Update what to display.
+        /*!
+            \param game GameManager that can be used.
+            \sa HandleEvents(GameManager * game) and Draw(GameManager * game)
+        */
+        virtual void Update(GameManager * game) = 0;
+
+        //! Virtual member. Draw what to draw.
+        /*!
+            \param game GameManager that can be used.
+            \sa HandleEvents(GameManager * game) and Update(GameManager * game)
+        */
+        virtual void Draw(GameManager * game) = 0;
+
+        //! Change the actual state.
+        /*!
+            \param game GameManager that will call the state.
+            \param state GameState that will be called.
+        */
+        void ChangeState(GameManager* game, GameState* state) { game->ChangeState(state); }
+
+    protected:
+        //! Constructor.
+        /*!
+            Construct GameState.
+        */
+        GameState() { }
 };
 
 }
