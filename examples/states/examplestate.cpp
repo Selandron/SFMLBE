@@ -36,7 +36,7 @@
 
     How to compile :
     Go in the example folder and use :
-    g++ .\states\examplestate.cpp ..\release\sfmlbe.cpp ..\release\tinyxml2.cpp -W -Wall -ansi -std=c++11 -I"SFMLPATH"\include -L"SFMLPATH"\lib -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio -lsfml-network -o exe1
+    g++ .\states\examplestate.cpp ..\release\sfmlbe.cpp ..\release\tinyxml2.cpp -W -Wall -ansi -std=c++11 -I"SFMLPATH"\include -L"SFMLPATH"\lib -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio -lsfml-network -o exe
     Don't forget to add .dll on Windows !
 
  */
