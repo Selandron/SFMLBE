@@ -112,7 +112,8 @@ bool sfmlbe::GameManager::checkIni()
 	std::ifstream infile("config.ini");
 	if (!infile)
 	{
-		m_parameters.windowCaracts = sf::VideoMode(800, 600, 32);
+		std::vector<sf::VideoMode> modes = sf::VideoMode::getFullscreenModes();
+		m_parameters.windowCaracts = modes[modes.size() - 1];
 		m_parameters.fullscreen = false;
 		m_parameters.antialiasingLevel = 0;
 		m_parameters.maxFramerate = 60;
@@ -121,7 +122,7 @@ bool sfmlbe::GameManager::checkIni()
 		std::ofstream outfile("config.ini");
 		if (!outfile)
 			return false;
-		outfile << "fullscreen = false" << std::endl << "width = 800" << std::endl << "height = 600" << std::endl << "dpp = 32" << std::endl << "antialiasing = 0" << std::endl << "frameratemax = 60" << std::endl << "verticalsync = false" << std::endl << "lang = 0";
+		outfile << "fullscreen = false" << std::endl << "width = " << m_parameters.windowCaracts.width << std::endl << "height = " << m_parameters.windowCaracts.height << std::endl << "dpp = " << m_parameters.windowCaracts.bitsPerPixel << std::endl << "antialiasing = 0" << std::endl << "frameratemax = 60" << std::endl << "verticalsync = false" << std::endl << "lang = 0";
 		outfile.close();
 		return true;
 	}
@@ -191,15 +192,7 @@ bool sfmlbe::GameManager::checkIni()
 		return false;
 
 	//Test on variables
-	std::vector<sf::VideoMode> listVideoMode = sf::VideoMode::getFullscreenModes();
-	bool found = false;
-	for (std::vector<sf::VideoMode>::iterator i = listVideoMode.begin(); i != listVideoMode.end(); ++i)
-		if (*i == m_parameters.windowCaracts)
-		{
-			found = true;
-			break;
-		}
-	if (!found)
+	if (!m_parameters.windowCaracts.isValid())
 		return false;
 
 	if (m_parameters.antialiasingLevel < 0 || m_parameters.antialiasingLevel > 10)

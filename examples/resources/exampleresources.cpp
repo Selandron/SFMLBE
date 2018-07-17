@@ -44,7 +44,7 @@ int main()
     	texture = *_GET_TEXTURE("wood_tileset");
     	font = *_GET_FONT("arial");
     	string = *_GET_TEXT("text1", "first-key");
-    	music = _GET_MUSIC("power-bots-loop"); //Music can be copied, you have to use referencs only
+    	music = _GET_MUSIC("power-bots-loop"); //Music can't be copied, you have to use references only
     	buffer = *_GET_SOUNDBUFFER("patakas-world");
     }
     catch(sfmlbe::ResourceNotFoundException e)
